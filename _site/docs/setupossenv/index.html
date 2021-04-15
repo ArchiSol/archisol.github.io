@@ -1,0 +1,412 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>프로젝트 환경구성 - Architecture Soluction Opensource</title>
+<meta name="description" content="오픈소스 개발환경은 GitHub를 중심으로 수많은 오픈소스 서비스들로 구성되어있다. GitHub 기능만으로도  프로젝트 계획, 소스관리, 문서관리, 웹사이트, CI/CD 까지 거의 모든 환경구성을 진행할 수 있다.  또한 Travis CI, Circle CI, Codecov, Slack, Sonarcloud, telegram 등 수많은 서비스와 연동하여 유기적으로 프로젝트를 진행할 수 있다.">
+
+
+  <meta name="author" content="Architecture Soluction Opensource">
+  
+  <meta property="article:author" content="Architecture Soluction Opensource">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Architecture Soluction Opensource">
+<meta property="og:title" content="프로젝트 환경구성">
+<meta property="og:url" content="http://10.81.208.53:8999/docs/setupossenv/">
+
+
+  <meta property="og:description" content="오픈소스 개발환경은 GitHub를 중심으로 수많은 오픈소스 서비스들로 구성되어있다. GitHub 기능만으로도  프로젝트 계획, 소스관리, 문서관리, 웹사이트, CI/CD 까지 거의 모든 환경구성을 진행할 수 있다.  또한 Travis CI, Circle CI, Codecov, Slack, Sonarcloud, telegram 등 수많은 서비스와 연동하여 유기적으로 프로젝트를 진행할 수 있다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-04-15T17:57:38+09:00">
+
+
+
+  <meta property="article:modified_time" content="2021-04-12T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://10.81.208.53:8999/docs/setupossenv/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Architecture Soluction Opensource",
+      "url": "http://10.81.208.53:8999/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Architecture Soluction Opensource Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/ELENA_LOGO_NAME.png" alt=" "></a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/organization/">Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/architecture-solution/">Events</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/architecture-solution/">GitHub</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">오픈소스 시작하기</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/organization/">조직구성</a></li>
+          
+            <li><a href="/docs/license/">라이선스</a></li>
+          
+            <li><a href="/docs/setupossenv/" class="active">프로젝트 환경구성</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">오픈소스 기여하기</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/configuration/">기여 Rule</a></li>
+          
+            <li><a href="/docs/overriding-theme-defaults/">기여절차</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">오픈소스 공개하기</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/configuration/">공개 절차</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="프로젝트 환경구성">
+    <meta itemprop="description" content="오픈소스 개발환경은 GitHub를 중심으로 수많은 오픈소스 서비스들로 구성되어있다. GitHub 기능만으로도 프로젝트 계획, 소스관리, 문서관리, 웹사이트, CI/CD 까지 거의 모든 환경구성을 진행할 수 있다. 또한 Travis CI, Circle CI, Codecov, Slack, Sonarcloud, telegram 등 수많은 서비스와 연동하여유기적으로 프로젝트를 진행할 수 있다.">
+    <meta itemprop="datePublished" content="2021-04-15T17:57:38+09:00">
+    <meta itemprop="dateModified" content="2021-04-12T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">프로젝트 환경구성
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#오픈소스-cicd-환경">오픈소스 CI/CD 환경</a><ul><li><a href="#plan">PLAN</a></li><li><a href="#develop">Develop</a></li><li><a href="#integration">Integration</a></li><li><a href="#build">Build</a></li><li><a href="#verify">Verify</a></li><li><a href="#release">Release</a></li><li><a href="#feedback">Feedback</a></li></ul></li><li><a href="#참고">참고</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>오픈소스 개발환경은 GitHub를 중심으로 수많은 오픈소스 서비스들로 구성되어있다. GitHub 기능만으로도 
+프로젝트 계획, 소스관리, 문서관리, 웹사이트, CI/CD 까지 거의 모든 환경구성을 진행할 수 있다. 
+또한 Travis CI, Circle CI, Codecov, Slack, Sonarcloud, telegram 등 수많은 서비스와 연동하여
+유기적으로 프로젝트를 진행할 수 있다.</p>
+
+<h2 id="오픈소스-cicd-환경">오픈소스 CI/CD 환경</h2>
+<p>오픈소스 프로젝트에서 일반적으로 사용하는 서비스 / 솔루션을 정리한 내용이다.</p>
+<figure>
+  <img src="/assets/images/osscicd.PNG" alt="oss cicd" />
+</figure>
+
+<h3 id="plan">PLAN</h3>
+<p>요구사항 / 진척사항 등 을 관리한다.<br />
+issue 설명</p>
+
+<h3 id="develop">Develop</h3>
+<p>분석 / 설계 / 개발 / 문서화 등이 진행된다. 생성되는 결과물은 Git 과 같은 VCS 를 통해 관리 된다.
+오픈소스 프로젝트에 대한 웹사이트는 일반적으로 Static Site Generator 를 통해 생성하여 관리한다.<br />
+jekyll 설명</p>
+
+<h3 id="integration">Integration</h3>
+<p>오픈소스 전반에 걸쳐 통합한다. Build / Testing / Release 등의 작업이 CI 를 통해 진행된다.<br />
+github ci 설명</p>
+
+<h3 id="build">Build</h3>
+<p>library packaging, testing, code quality 분석등 다양한 작업이 Build 를 통해 진행된다.
+Pull Request, Merge, Push 등 다양한 시점에 자동으로 트리거되도록 설정할 수 있다.<br />
+Gradle 설명</p>
+
+<h3 id="verify">Verify</h3>
+<p>Code Quality, Testing 작업을 진행한다. 이를 통해 오픈소스의 완성도를 높일 수 있다.
+rxJava 와 같은 프로젝트는 Coverage 가 100% 를 유지하고 있다. 이런 지표들을 통해 사용자에게 신뢰받는 오픈소스로 거듭날 수 있다.<br />
+sonarcloud 설명<br />
+codecov 설명</p>
+
+<h3 id="release">Release</h3>
+<p>Build 에 의해 생성된 jar, war, static website, 문서 등 결과물을 배포한다.
+유형에 따라 Maven, Artifactory, GitHub Page 등에 배포된다.<br />
+artifactory 설명<br />
+page 설명</p>
+
+<h3 id="feedback">Feedback</h3>
+<p>오픈소스에서 커뮤니티를 운영하는것은 가장 중요한 작업중 하나다. 커뮤니티의 활성화에 따라 사용자 / 기여자 의 참여율이 달라진다.
+여러가지 Feedback 경로를 통해 사용자들의 의견을 청취하고, 반영해야한다.<br />
+issue 설명<br />
+google groups 설명</p>
+
+<h2 id="참고">참고</h2>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2021-04-12">April 12, 2021</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/docs/license/" class="pagination--pager" title="라이선스
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Architecture Soluction Opensource. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

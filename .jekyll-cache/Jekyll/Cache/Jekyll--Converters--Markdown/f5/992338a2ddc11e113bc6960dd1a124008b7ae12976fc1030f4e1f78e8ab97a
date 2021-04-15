@@ -1,0 +1,5 @@
+I"�<p>오픈소스 개발환경은 GitHub를 중심으로 수많은 오픈소스 서비스들로 구성되어있다. GitHub 기능만으로도 
+프로젝트 계획, 소스관리, 문서관리, 웹사이트, CI/CD 까지 거의 모든 환경구성을 진행할 수 있다. 
+또한 Travis CI, Circle CI, Codecov, Slack, Sonarcloud, telegram 등 수많은 서비스와 연동하여
+유기적으로 프로젝트를 진행할 수 있다.</p>
+:ET

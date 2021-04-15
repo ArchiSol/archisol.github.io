@@ -1,0 +1,646 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Code Coverage - Architecture Soluction Opensource</title>
+<meta name="description" content="Code Coverage Code Coverage 는 테스트를 진행했을때 코드 자체가 얼마나 실행되었는지 측정하는 것이다. 코드는 구문(Statement), 조건(Condition), 결정(Decision) 으로 이루어진다. 이 세가지 항목을 얼마나 커버했느냐에 따라 측정값이 달라진다. 일반적으로 많이 사용되는 커버리지는 구문(Statement)커버리지이며, 실행 코드라인이 한번 이상 실행 되면 충족된다. 조건(Condition)커버리지는 각 내부 조건이 참 혹은 거짓을 가지면 충족된다. 결정(Decision) 커버리지는 각 분기의 내부 조건자체가 아닌 이러한 조건으로 인해 전체 결과가 참 혹은 거짓이면 충족된다.">
+
+
+  <meta name="author" content="Architecture Soluction Opensource">
+  
+  <meta property="article:author" content="Architecture Soluction Opensource">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Architecture Soluction Opensource">
+<meta property="og:title" content="Code Coverage">
+<meta property="og:url" content="http://10.81.208.53:8999/code-coverage/">
+
+
+  <meta property="og:description" content="Code Coverage Code Coverage 는 테스트를 진행했을때 코드 자체가 얼마나 실행되었는지 측정하는 것이다. 코드는 구문(Statement), 조건(Condition), 결정(Decision) 으로 이루어진다. 이 세가지 항목을 얼마나 커버했느냐에 따라 측정값이 달라진다. 일반적으로 많이 사용되는 커버리지는 구문(Statement)커버리지이며, 실행 코드라인이 한번 이상 실행 되면 충족된다. 조건(Condition)커버리지는 각 내부 조건이 참 혹은 거짓을 가지면 충족된다. 결정(Decision) 커버리지는 각 분기의 내부 조건자체가 아닌 이러한 조건으로 인해 전체 결과가 참 혹은 거짓이면 충족된다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-04-03T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://10.81.208.53:8999/code-coverage/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Architecture Soluction Opensource",
+      "url": "http://10.81.208.53:8999/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Architecture Soluction Opensource Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/ELENA_LOGO_NAME.png" alt=" "></a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/organization/">Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/architecture-solution/">Events</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/architecture-solution/">GitHub</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Architecture Soluction Opensource</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Architecture Soluction Opensource.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Seoul</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Code Coverage">
+    <meta itemprop="description" content="Code CoverageCode Coverage 는 테스트를 진행했을때 코드 자체가 얼마나 실행되었는지 측정하는 것이다.코드는 구문(Statement), 조건(Condition), 결정(Decision) 으로 이루어진다. 이 세가지 항목을 얼마나 커버했느냐에 따라 측정값이 달라진다. 일반적으로 많이 사용되는 커버리지는 구문(Statement)커버리지이며, 실행 코드라인이 한번 이상 실행 되면 충족된다. 조건(Condition)커버리지는 각 내부 조건이 참 혹은 거짓을 가지면 충족된다. 결정(Decision) 커버리지는 각 분기의 내부 조건자체가 아닌 이러한 조건으로 인해 전체 결과가 참 혹은 거짓이면 충족된다.">
+    <meta itemprop="datePublished" content="2021-04-03T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Code Coverage
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#code-coverage">Code Coverage</a></li><li><a href="#jacoco">JaCoCo</a><ul><li><a href="#jacoco-설정">JaCoCo 설정</a></li></ul></li><li><a href="#codecov">Codecov</a><ul><li><a href="#codecov-사용법">Codecov 사용법</a></li></ul></li><li><a href="#기타-참고-사항">기타 참고 사항</a></li><li><a href="#참고">참고</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="code-coverage">Code Coverage</h2>
+<p>Code Coverage 는 테스트를 진행했을때 코드 자체가 얼마나 실행되었는지 측정하는 것이다.
+코드는 구문(Statement), 조건(Condition), 결정(Decision) 으로 이루어진다. 이 세가지 항목을 얼마나 커버했느냐에 따라 측정값이 달라진다. 일반적으로 많이 사용되는 커버리지는 구문(Statement)커버리지이며, 실행 코드라인이 한번 이상 실행 되면 충족된다. 조건(Condition)커버리지는 각 내부 조건이 참 혹은 거짓을 가지면 충족된다. 결정(Decision) 커버리지는 각 분기의 내부 조건자체가 아닌 이러한 조건으로 인해 전체 결과가 참 혹은 거짓이면 충족된다.</p>
+
+<h2 id="jacoco">JaCoCo</h2>
+<p>JaCoCo 는 Java Code Coverage 를 측정하는 오픈소스 라이브러리다. 테스트 결과에 따라 xml, html 형태로 보고서가 작성된다. 또한 목표하는 커버리지를 설정하고, 이를 만족하는지 확인 할 수 있다.</p>
+
+<h3 id="jacoco-설정">JaCoCo 설정</h3>
+<ul>
+  <li>Gradle 설정에 플러그인 추가 / 설정 진행<br />
+<a href="#참고">(상세 설정은 본 포스트 하단 참조.)</a></li>
+</ul>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plugins</span> <span class="o">{</span>
+    <span class="n">id</span> <span class="s1">'jacoco'</span>
+<span class="o">}</span>
+
+<span class="n">jacoco</span> <span class="o">{</span>
+    <span class="n">toolVersion</span> <span class="o">=</span> <span class="s2">"0.8.5"</span>
+<span class="o">}</span>
+
+<span class="n">jacocoTestReport</span> <span class="o">{</span>
+    <span class="n">reports</span> <span class="o">{</span>
+        <span class="n">xml</span><span class="o">.</span><span class="na">enabled</span> <span class="o">=</span> <span class="kc">true</span> <span class="c1">// codecov depends on xml format report</span>
+        <span class="n">html</span><span class="o">.</span><span class="na">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">jacocoTestCoverageVerification</span> <span class="o">{</span>
+    <span class="n">violationRules</span> <span class="o">{</span>
+        <span class="n">rule</span> <span class="o">{</span>
+            <span class="n">element</span> <span class="o">=</span> <span class="s1">'CLASS'</span>
+            <span class="n">limit</span> <span class="o">{</span>
+                <span class="n">counter</span> <span class="o">=</span> <span class="s1">'METHOD'</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="s1">'COVEREDRATIO'</span>
+                <span class="n">minimum</span> <span class="o">=</span> <span class="mf">0.90</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<ul>
+  <li>gradle test 수행을 통해 정상 작동 확인<br />
+ ./build/report 경로에 정상적으로 jacoco 리포트가 생성 되었는지 확인한다.
+<code class="language-plaintext highlighter-rouge">shell script 
+gradle test jacocoTestReport jacocoTestCoverageVerification
+</code>
+    <h2 id="codecov">Codecov</h2>
+    <p>Codecov 는 Code Coverage 결과를 통합 관리하고, Github / Circle CI / Slack 등과 연동하여 사용할 수 있는 편의를 제공한다. 주로 Github PR 분석, PR Block, Merging Report 의 용도로 사용 한다.</p>
+  </li>
+</ul>
+
+<h3 id="codecov-사용법">Codecov 사용법</h3>
+<ul>
+  <li>Codecov 가입 진행 <a href="https://about.codecov.io/">(Codecov 홈페이지)</a></li>
+  <li>Codecov 를 사용할 Github 계정 / Repository 선택하면 Codecov Token 이 발급된다.<br />
+ 해당 토큰을 복사 후 Github Repository Secret 에 등록 한다.<br />
+<img src="../assets/images/posts/createCodecovSecretToGithub.PNG" alt="createCodecovSecretToGithub" /></li>
+  <li>Github Action 을 이용하여 Gradle test 결과를 Codecov 로 업로드<br />
+프로젝트 root 의 .github/workflows 디렉토리에 test.yml 을 생성한다. 내용은 아래와 같다.</li>
+</ul>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">Test with Gradle</span>
+
+<span class="na">on</span><span class="pi">:</span> <span class="c1"># Event</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">master</span> <span class="pi">]</span> 
+  <span class="na">pull_request</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">master</span> <span class="pi">]</span>
+
+<span class="na">jobs</span><span class="pi">:</span> 
+  <span class="na">test</span><span class="pi">:</span> <span class="c1"># Job id</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span> <span class="c1"># Runner</span>
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span> <span class="c1"># Step</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set up JDK 11</span> 
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-java@v1</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">java-version</span><span class="pi">:</span> <span class="s">11</span> 
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Grant execute permission for gradlew</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="s">chmod +x gradlew</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Test with Gradle</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="s">./gradlew test jacocoTestReport jacocoTestCoverageVerification</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Upload coverage to Codecov</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">codecov/codecov-action@v1</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">token</span><span class="pi">:</span> <span class="s">$</span>
+        <span class="na">file</span><span class="pi">:</span> <span class="s">./build/reports/jacoco/test/jacocoTestReport.xml</span>
+
+</code></pre></div></div>
+<ul>
+  <li>Pull Request 요청시 bot 을 통한 자동 Test 결과 comment 생성<br />
+프로젝트 root 에 .codecov.yml 을 생성한다. 내용은 아래와 같다.</li>
+</ul>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">comment</span><span class="pi">:</span>                  <span class="c1"># this is a top-level key</span>
+  <span class="na">layout</span><span class="pi">:</span> <span class="s2">"</span><span class="s">reach,</span><span class="nv"> </span><span class="s">diff,</span><span class="nv"> </span><span class="s">flags,</span><span class="nv"> </span><span class="s">files"</span>
+  <span class="na">behavior</span><span class="pi">:</span> <span class="s">default</span>
+  <span class="na">require_changes</span><span class="pi">:</span> <span class="no">false</span>  <span class="c1"># if true: only post the comment if coverage changes</span>
+  <span class="na">require_base</span><span class="pi">:</span> <span class="s">no</span>        <span class="c1"># [yes :: must have a base report to post]</span>
+  <span class="na">require_head</span><span class="pi">:</span> <span class="s">yes</span>       <span class="c1"># [yes :: must have a head report to post]</span>
+  <span class="na">branches</span><span class="pi">:</span>               <span class="c1"># branch names that can post comment</span>
+    <span class="pi">-</span> <span class="s2">"</span><span class="s">master"</span>
+</code></pre></div></div>
+
+<h2 id="기타-참고-사항">기타 참고 사항</h2>
+<ul>
+  <li>Lombok에 의해 자동 생성된 코드에 대한 Test Coverage 예외처리 적용<br />
+프로젝트 root 에 lombok.config 를 생성한다. 내용은 아래와 같다.</li>
+</ul>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">config.stopBubbling = </span><span class="no">true</span>
+<span class="s">lombok.addLombokGeneratedAnnotation = </span><span class="no">true</span>
+</code></pre></div></div>
+
+<h2 id="참고">참고</h2>
+<p><a href="https://docs.gradle.org/current/userguide/jacoco_plugin.html">JaCoCo-Gradle 공식</a><br />
+<a href="https://woowabros.github.io/experience/2020/02/02/jacoco-config-on-gradle-project.html">JaCoCo-우아한형제들 블로그</a><br />
+<a href="https://woowacourse.github.io/javable/post/2020-10-24-code-coverage/">CodeCoverage-우아한테크코스</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#blog" class="page__taxonomy-item" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2021-04-03T00:00:00+09:00">April 3, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Code+Coverage%20http%3A%2F%2F10.81.208.53%3A8999%2Fcode-coverage%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F10.81.208.53%3A8999%2Fcode-coverage%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F10.81.208.53%3A8999%2Fcode-coverage%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">이전</a>
+    
+    
+      <a href="/oss-guide/" class="pagination--pager" title="Opensource Guide
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/jekyll/" rel="permalink">Jekyll
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Jekyll은 개인 프로젝트 또는 조직 사이트에 적합한 정적 사이트 생성기 입니다. Jekyll 은 콘텐츠를 가져와 Markdown 및 Liquid 템플릿을 렌더링하여 웹사이트를 생성합니다. 기본적으로 Jekyll 은 Ruby 로 만들어져 있으나, 운영하는데 Ruby 를 공부할 필...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/oss-guide/" rel="permalink">Opensource Guide
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">#oss guide 시작??
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Architecture Soluction Opensource. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

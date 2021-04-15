@@ -1,0 +1,562 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Jekyll - Architecture Soluction Opensource</title>
+<meta name="description" content="Jekyll은 개인 프로젝트 또는 조직 사이트에 적합한 정적 사이트 생성기 입니다. Jekyll 은 콘텐츠를 가져와 Markdown 및 Liquid 템플릿을 렌더링하여 웹사이트를 생성합니다. 기본적으로 Jekyll 은 Ruby 로 만들어져 있으나, 운영하는데 Ruby 를 공부할 필요는 없습니다. 간단히 Markdown 을 생성 수정하는것 만으로 웹사이트를 운영할 수 있습니다. 또한 GitHub 와 강력히 연동되어 있습니다. GitHub 에 Markdown 파일을 push 하기만 하면 Github Page 에서 자동으로 웹페이지를 업데이트해 줍니다.">
+
+
+  <meta name="author" content="Architecture Soluction Opensource">
+  
+  <meta property="article:author" content="Architecture Soluction Opensource">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Architecture Soluction Opensource">
+<meta property="og:title" content="Jekyll">
+<meta property="og:url" content="http://10.81.208.53:8999/jekyll/">
+
+
+  <meta property="og:description" content="Jekyll은 개인 프로젝트 또는 조직 사이트에 적합한 정적 사이트 생성기 입니다. Jekyll 은 콘텐츠를 가져와 Markdown 및 Liquid 템플릿을 렌더링하여 웹사이트를 생성합니다. 기본적으로 Jekyll 은 Ruby 로 만들어져 있으나, 운영하는데 Ruby 를 공부할 필요는 없습니다. 간단히 Markdown 을 생성 수정하는것 만으로 웹사이트를 운영할 수 있습니다. 또한 GitHub 와 강력히 연동되어 있습니다. GitHub 에 Markdown 파일을 push 하기만 하면 Github Page 에서 자동으로 웹페이지를 업데이트해 줍니다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-04-14T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://10.81.208.53:8999/jekyll/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Architecture Soluction Opensource",
+      "url": "http://10.81.208.53:8999/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Architecture Soluction Opensource Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/ELENA_LOGO_NAME.png" alt=" "></a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/organization/">Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/architecture-solution/">Events</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/architecture-solution/">GitHub</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Architecture Soluction Opensource</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Architecture Soluction Opensource.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Seoul</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Jekyll">
+    <meta itemprop="description" content="Jekyll은 개인 프로젝트 또는 조직 사이트에 적합한 정적 사이트 생성기 입니다. Jekyll 은 콘텐츠를 가져와 Markdown 및 Liquid 템플릿을 렌더링하여 웹사이트를 생성합니다. 기본적으로 Jekyll 은 Ruby 로 만들어져 있으나, 운영하는데 Ruby 를 공부할 필요는 없습니다.간단히 Markdown 을 생성 수정하는것 만으로 웹사이트를 운영할 수 있습니다. 또한 GitHub 와 강력히 연동되어 있습니다.GitHub 에 Markdown 파일을 push 하기만 하면 Github Page 에서 자동으로 웹페이지를 업데이트해 줍니다.">
+    <meta itemprop="datePublished" content="2021-04-14T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Jekyll
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#jekyll-theme">Jekyll Theme</a></li><li><a href="#github-page-시작하기">Github Page 시작하기</a><ul><li><a href="#ruby--jekyll-설치">Ruby / Jekyll 설치</a></li><li><a href="#theme-적용">Theme 적용</a></li><li><a href="#github-page-연동">Github Page 연동</a><ul><li><a href="#대표-page-용-별도-repository-사용">대표 Page 용 별도 Repository 사용</a></li><li><a href="#프로젝트-별-page-사용">프로젝트 별 Page 사용</a></li></ul></li></ul></li><li><a href="#참고">참고</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>Jekyll은 개인 프로젝트 또는 조직 사이트에 적합한 정적 사이트 생성기 입니다. Jekyll 은 콘텐츠를 가져와 Markdown 및 Liquid 템플릿을 렌더링하여 웹사이트를 생성합니다. 기본적으로 Jekyll 은 Ruby 로 만들어져 있으나, 운영하는데 Ruby 를 공부할 필요는 없습니다.
+간단히 Markdown 을 생성 수정하는것 만으로 웹사이트를 운영할 수 있습니다. 또한 GitHub 와 강력히 연동되어 있습니다.
+GitHub 에 Markdown 파일을 push 하기만 하면 Github Page 에서 자동으로 웹페이지를 업데이트해 줍니다.</p>
+
+<h2 id="jekyll-theme">Jekyll Theme</h2>
+<p>Jekyll 에서는 Theme 를 사용하여 웹사이트를 구성할 수 있습니다. <a href="https://jekyllthemes.io/">Jekyll Themes</a> 에 접속하면 여러가지 형태의 Theme 를 확인 할 수 있습니다. 현재 사이트는 <a href="https://mmistakes.github.io/minimal-mistakes/">Minimal Mistakes Theme</a> 를 사용하였습니다. Minimal Mistakes 는 가이드 문서가 자세히 작성되어있고, 구글링을 통해 정보를 많이 얻을 수 있어 Jekyll 을 시작하기에 좋은 Theme 입니다.</p>
+
+<h2 id="github-page-시작하기">Github Page 시작하기</h2>
+<h3 id="ruby--jekyll-설치">Ruby / Jekyll 설치</h3>
+<p><a href="https://jekyllrb-ko.github.io/docs/">Jekyll 설치가이드</a> 를 참조하여 진행합니다. CNS 클라우드 윈도우 환경에서는 Jekyll / Bundler 설치 관련에러가 발생할 수 있습니다. ubuntu 서버에서 진행시 문제없이 설치가 가능합니다.</p>
+
+<h3 id="theme-적용">Theme 적용</h3>
+<p><a href="https://github.com/mmistakes/minimal-mistakes">Minimal Mistakes github</a> 에서 소스를 다운로드 받아 ‘bundle exec jekyll serve’ 명령을 수행하여 Theme 가 적용된 화면을 확인합니다.</p>
+
+<h3 id="github-page-연동">Github Page 연동</h3>
+<h4 id="대표-page-용-별도-repository-사용">대표 Page 용 별도 Repository 사용</h4>
+<p>‘username.github.io’ Repository 를 생성하고, 해당 Repository 로 소스를 push 하면 Github Page 가 자동으로 생성됩니다.
+몇분정도 시간이 걸리며, username.github.io 로 브라우저에서 접속이 가능합니다.</p>
+
+<h4 id="프로젝트-별-page-사용">프로젝트 별 Page 사용</h4>
+<p>프로젝트의 Repository 에서 ‘gh-pages’ branch 를 생성하거나, root 경로에 ‘docs’ 디렉토리를 생성하여 소스를 업로드 합니다.
+Repository -&gt; Settings -&gt; Pages 메뉴로 접근하면 GitHub Page 에서 사용할 branch / 디렉토리를 선택 할 수 있습니다.
+이경우 username.github.io/repositoryname 으로 주소가 생성됩니다.</p>
+
+<p>여기까지 진행하시면 기본적인 Github Page 셋업은 완료되었습니다.
+Minimal-Mistakes 관련 상세 설정은 <a href="https://mmistakes.github.io/minimal-mistakes/">Minimal Mistakes</a>, <a href="https://devinlife.com/howto/">취미로 코딩하는 개발자</a>, <a href="https://ansohxxn.github.io/blog/jekyll-directory-structure/">공부하는 식빵맘</a> 를 참조하시어
+원하시는 방향으로 발전시켜 나가시면 됩니다.</p>
+
+<h2 id="참고">참고</h2>
+<p><a href="https://jekyllrb-ko.github.io/">Jekyll 공식</a><br />
+<a href="https://mmistakes.github.io/minimal-mistakes/">Minimal Mistakes</a><br />
+<a href="https://devinlife.com/howto/">취미로 코딩하는 개발자 - github page 따라하기</a><br />
+<a href="https://ansohxxn.github.io/blog/jekyll-directory-structure/">공부하는 식빵맘</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#blog" class="page__taxonomy-item" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2021-04-14T00:00:00+09:00">April 14, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Jekyll%20http%3A%2F%2F10.81.208.53%3A8999%2Fjekyll%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F10.81.208.53%3A8999%2Fjekyll%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F10.81.208.53%3A8999%2Fjekyll%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/oss-guide/" class="pagination--pager" title="Opensource Guide
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/oss-guide/" rel="permalink">Opensource Guide
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">#oss guide 시작??
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/code-coverage/" rel="permalink">Code Coverage
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Code Coverage
+Code Coverage 는 테스트를 진행했을때 코드 자체가 얼마나 실행되었는지 측정하는 것이다.
+코드는 구문(Statement), 조건(Condition), 결정(Decision) 으로 이루어진다. 이 세가지 항목을 얼마나 커버했느냐에 따라 측정값이 달라...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Architecture Soluction Opensource. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

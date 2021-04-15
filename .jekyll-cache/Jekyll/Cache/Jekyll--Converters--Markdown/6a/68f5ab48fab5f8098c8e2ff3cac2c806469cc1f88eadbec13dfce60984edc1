@@ -1,0 +1,4 @@
+I"u<p>Jekyll은 개인 프로젝트 또는 조직 사이트에 적합한 정적 사이트 생성기 입니다. Jekyll 은 콘텐츠를 가져와 Markdown 및 Liquid 템플릿을 렌더링하여 웹사이트를 생성합니다. 기본적으로 Jekyll 은 Ruby 로 만들어져 있으나, 운영하는데 Ruby 를 공부할 필요는 없습니다.
+간단히 Markdown 을 생성 수정하는것 만으로 웹사이트를 운영할 수 있습니다. 또한 GitHub 와 강력히 연동되어 있습니다.
+GitHub 에 Markdown 파일을 push 하기만 하면 Github Page 에서 자동으로 웹페이지를 업데이트해 줍니다.</p>
+:ET

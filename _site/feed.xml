@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://10.81.208.53:8999/feed.xml" rel="self" type="application/atom+xml" /><link href="http://10.81.208.53:8999/" rel="alternate" type="text/html" /><updated>2021-04-15T17:57:38+09:00</updated><id>http://10.81.208.53:8999/feed.xml</id><title type="html">Architecture Soluction Opensource</title><subtitle>Architecture Soluction Opensource.</subtitle><author><name>Architecture Soluction Opensource</name></author><entry><title type="html">Jekyll</title><link href="http://10.81.208.53:8999/jekyll/" rel="alternate" type="text/html" title="Jekyll" /><published>2021-04-14T00:00:00+09:00</published><updated>2021-04-14T00:00:00+09:00</updated><id>http://10.81.208.53:8999/jekyll</id><content type="html" xml:base="http://10.81.208.53:8999/jekyll/">&lt;p&gt;Jekyll은 개인 프로젝트 또는 조직 사이트에 적합한 정적 사이트 생성기 입니다. Jekyll 은 콘텐츠를 가져와 Markdown 및 Liquid 템플릿을 렌더링하여 웹사이트를 생성합니다. 기본적으로 Jekyll 은 Ruby 로 만들어져 있으나, 운영하는데 Ruby 를 공부할 필요는 없습니다.
+간단히 Markdown 을 생성 수정하는것 만으로 웹사이트를 운영할 수 있습니다. 또한 GitHub 와 강력히 연동되어 있습니다.
+GitHub 에 Markdown 파일을 push 하기만 하면 Github Page 에서 자동으로 웹페이지를 업데이트해 줍니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll-theme&quot;&gt;Jekyll Theme&lt;/h2&gt;
+&lt;p&gt;Jekyll 에서는 Theme 를 사용하여 웹사이트를 구성할 수 있습니다. &lt;a href=&quot;https://jekyllthemes.io/&quot;&gt;Jekyll Themes&lt;/a&gt; 에 접속하면 여러가지 형태의 Theme 를 확인 할 수 있습니다. 현재 사이트는 &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/&quot;&gt;Minimal Mistakes Theme&lt;/a&gt; 를 사용하였습니다. Minimal Mistakes 는 가이드 문서가 자세히 작성되어있고, 구글링을 통해 정보를 많이 얻을 수 있어 Jekyll 을 시작하기에 좋은 Theme 입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;github-page-시작하기&quot;&gt;Github Page 시작하기&lt;/h2&gt;
+&lt;h3 id=&quot;ruby--jekyll-설치&quot;&gt;Ruby / Jekyll 설치&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb-ko.github.io/docs/&quot;&gt;Jekyll 설치가이드&lt;/a&gt; 를 참조하여 진행합니다. CNS 클라우드 윈도우 환경에서는 Jekyll / Bundler 설치 관련에러가 발생할 수 있습니다. ubuntu 서버에서 진행시 문제없이 설치가 가능합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;theme-적용&quot;&gt;Theme 적용&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;Minimal Mistakes github&lt;/a&gt; 에서 소스를 다운로드 받아 ‘bundle exec jekyll serve’ 명령을 수행하여 Theme 가 적용된 화면을 확인합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;github-page-연동&quot;&gt;Github Page 연동&lt;/h3&gt;
+&lt;h4 id=&quot;대표-page-용-별도-repository-사용&quot;&gt;대표 Page 용 별도 Repository 사용&lt;/h4&gt;
+&lt;p&gt;‘username.github.io’ Repository 를 생성하고, 해당 Repository 로 소스를 push 하면 Github Page 가 자동으로 생성됩니다.
+몇분정도 시간이 걸리며, username.github.io 로 브라우저에서 접속이 가능합니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;프로젝트-별-page-사용&quot;&gt;프로젝트 별 Page 사용&lt;/h4&gt;
+&lt;p&gt;프로젝트의 Repository 에서 ‘gh-pages’ branch 를 생성하거나, root 경로에 ‘docs’ 디렉토리를 생성하여 소스를 업로드 합니다.
+Repository -&amp;gt; Settings -&amp;gt; Pages 메뉴로 접근하면 GitHub Page 에서 사용할 branch / 디렉토리를 선택 할 수 있습니다.
+이경우 username.github.io/repositoryname 으로 주소가 생성됩니다.&lt;/p&gt;
+
+&lt;p&gt;여기까지 진행하시면 기본적인 Github Page 셋업은 완료되었습니다.
+Minimal-Mistakes 관련 상세 설정은 &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/&quot;&gt;Minimal Mistakes&lt;/a&gt;, &lt;a href=&quot;https://devinlife.com/howto/&quot;&gt;취미로 코딩하는 개발자&lt;/a&gt;, &lt;a href=&quot;https://ansohxxn.github.io/blog/jekyll-directory-structure/&quot;&gt;공부하는 식빵맘&lt;/a&gt; 를 참조하시어
+원하시는 방향으로 발전시켜 나가시면 됩니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb-ko.github.io/&quot;&gt;Jekyll 공식&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/&quot;&gt;Minimal Mistakes&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://devinlife.com/howto/&quot;&gt;취미로 코딩하는 개발자 - github page 따라하기&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://ansohxxn.github.io/blog/jekyll-directory-structure/&quot;&gt;공부하는 식빵맘&lt;/a&gt;&lt;/p&gt;</content><author><name>Architecture Soluction Opensource</name></author><category term="Blog" /><summary type="html">Jekyll은 개인 프로젝트 또는 조직 사이트에 적합한 정적 사이트 생성기 입니다. Jekyll 은 콘텐츠를 가져와 Markdown 및 Liquid 템플릿을 렌더링하여 웹사이트를 생성합니다. 기본적으로 Jekyll 은 Ruby 로 만들어져 있으나, 운영하는데 Ruby 를 공부할 필요는 없습니다. 간단히 Markdown 을 생성 수정하는것 만으로 웹사이트를 운영할 수 있습니다. 또한 GitHub 와 강력히 연동되어 있습니다. GitHub 에 Markdown 파일을 push 하기만 하면 Github Page 에서 자동으로 웹페이지를 업데이트해 줍니다.</summary></entry><entry><title type="html">Code Coverage</title><link href="http://10.81.208.53:8999/code-coverage/" rel="alternate" type="text/html" title="Code Coverage" /><published>2021-04-03T00:00:00+09:00</published><updated>2021-04-03T00:00:00+09:00</updated><id>http://10.81.208.53:8999/code-coverage</id><content type="html" xml:base="http://10.81.208.53:8999/code-coverage/">&lt;h2 id=&quot;code-coverage&quot;&gt;Code Coverage&lt;/h2&gt;
+&lt;p&gt;Code Coverage 는 테스트를 진행했을때 코드 자체가 얼마나 실행되었는지 측정하는 것이다.
+코드는 구문(Statement), 조건(Condition), 결정(Decision) 으로 이루어진다. 이 세가지 항목을 얼마나 커버했느냐에 따라 측정값이 달라진다. 일반적으로 많이 사용되는 커버리지는 구문(Statement)커버리지이며, 실행 코드라인이 한번 이상 실행 되면 충족된다. 조건(Condition)커버리지는 각 내부 조건이 참 혹은 거짓을 가지면 충족된다. 결정(Decision) 커버리지는 각 분기의 내부 조건자체가 아닌 이러한 조건으로 인해 전체 결과가 참 혹은 거짓이면 충족된다.&lt;/p&gt;
+
+&lt;h2 id=&quot;jacoco&quot;&gt;JaCoCo&lt;/h2&gt;
+&lt;p&gt;JaCoCo 는 Java Code Coverage 를 측정하는 오픈소스 라이브러리다. 테스트 결과에 따라 xml, html 형태로 보고서가 작성된다. 또한 목표하는 커버리지를 설정하고, 이를 만족하는지 확인 할 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;jacoco-설정&quot;&gt;JaCoCo 설정&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Gradle 설정에 플러그인 추가 / 설정 진행&lt;br /&gt;
+&lt;a href=&quot;#참고&quot;&gt;(상세 설정은 본 포스트 하단 참조.)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;plugins&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jacoco'&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;jacoco&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;toolVersion&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;0.8.5&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;jacocoTestReport&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;reports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;enabled&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// codecov depends on xml format report&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;enabled&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;jacocoTestCoverageVerification&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;violationRules&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;rule&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'CLASS'&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;limit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;counter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'METHOD'&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'COVEREDRATIO'&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;minimum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.90&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;gradle test 수행을 통해 정상 작동 확인&lt;br /&gt;
+ ./build/report 경로에 정상적으로 jacoco 리포트가 생성 되었는지 확인한다.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shell script 
+gradle test jacocoTestReport jacocoTestCoverageVerification
+&lt;/code&gt;
+    &lt;h2 id=&quot;codecov&quot;&gt;Codecov&lt;/h2&gt;
+    &lt;p&gt;Codecov 는 Code Coverage 결과를 통합 관리하고, Github / Circle CI / Slack 등과 연동하여 사용할 수 있는 편의를 제공한다. 주로 Github PR 분석, PR Block, Merging Report 의 용도로 사용 한다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;codecov-사용법&quot;&gt;Codecov 사용법&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Codecov 가입 진행 &lt;a href=&quot;https://about.codecov.io/&quot;&gt;(Codecov 홈페이지)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Codecov 를 사용할 Github 계정 / Repository 선택하면 Codecov Token 이 발급된다.&lt;br /&gt;
+ 해당 토큰을 복사 후 Github Repository Secret 에 등록 한다.&lt;br /&gt;
+&lt;img src=&quot;../assets/images/posts/createCodecovSecretToGithub.PNG&quot; alt=&quot;createCodecovSecretToGithub&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Github Action 을 이용하여 Gradle test 결과를 Codecov 로 업로드&lt;br /&gt;
+프로젝트 root 의 .github/workflows 디렉토리에 test.yml 을 생성한다. 내용은 아래와 같다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Test with Gradle&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Event&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;master&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt; 
+  &lt;span class=&quot;na&quot;&gt;pull_request&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;master&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; 
+  &lt;span class=&quot;na&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Job id&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ubuntu-latest&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Runner&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/checkout@v2&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Step&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Set up JDK 11&lt;/span&gt; 
+      &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/setup-java@v1&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;java-version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;11&lt;/span&gt; 
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Grant execute permission for gradlew&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;chmod +x gradlew&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Test with Gradle&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./gradlew test jacocoTestReport jacocoTestCoverageVerification&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Upload coverage to Codecov&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;codecov/codecov-action@v1&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;token&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./build/reports/jacoco/test/jacocoTestReport.xml&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pull Request 요청시 bot 을 통한 자동 Test 결과 comment 생성&lt;br /&gt;
+프로젝트 root 에 .codecov.yml 을 생성한다. 내용은 아래와 같다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;                  &lt;span class=&quot;c1&quot;&gt;# this is a top-level key&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;reach,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;diff,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;flags,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;files&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;behavior&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;default&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;require_changes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;false&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# if true: only post the comment if coverage changes&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;require_base&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;no&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# [yes :: must have a base report to post]&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;require_head&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;yes&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;# [yes :: must have a head report to post]&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;               &lt;span class=&quot;c1&quot;&gt;# branch names that can post comment&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;master&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;기타-참고-사항&quot;&gt;기타 참고 사항&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Lombok에 의해 자동 생성된 코드에 대한 Test Coverage 예외처리 적용&lt;br /&gt;
+프로젝트 root 에 lombok.config 를 생성한다. 내용은 아래와 같다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;config.stopBubbling = &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;lombok.addLombokGeneratedAnnotation = &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.gradle.org/current/userguide/jacoco_plugin.html&quot;&gt;JaCoCo-Gradle 공식&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://woowabros.github.io/experience/2020/02/02/jacoco-config-on-gradle-project.html&quot;&gt;JaCoCo-우아한형제들 블로그&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://woowacourse.github.io/javable/post/2020-10-24-code-coverage/&quot;&gt;CodeCoverage-우아한테크코스&lt;/a&gt;&lt;/p&gt;</content><author><name>Architecture Soluction Opensource</name></author><category term="Blog" /><summary type="html">Code Coverage Code Coverage 는 테스트를 진행했을때 코드 자체가 얼마나 실행되었는지 측정하는 것이다. 코드는 구문(Statement), 조건(Condition), 결정(Decision) 으로 이루어진다. 이 세가지 항목을 얼마나 커버했느냐에 따라 측정값이 달라진다. 일반적으로 많이 사용되는 커버리지는 구문(Statement)커버리지이며, 실행 코드라인이 한번 이상 실행 되면 충족된다. 조건(Condition)커버리지는 각 내부 조건이 참 혹은 거짓을 가지면 충족된다. 결정(Decision) 커버리지는 각 분기의 내부 조건자체가 아닌 이러한 조건으로 인해 전체 결과가 참 혹은 거짓이면 충족된다.</summary></entry><entry><title type="html">Opensource Guide</title><link href="http://10.81.208.53:8999/oss-guide/" rel="alternate" type="text/html" title="Opensource Guide" /><published>2021-04-03T00:00:00+09:00</published><updated>2021-04-03T00:00:00+09:00</updated><id>http://10.81.208.53:8999/oss-guide</id><content type="html" xml:base="http://10.81.208.53:8999/oss-guide/">&lt;p&gt;#oss guide 시작??&lt;/p&gt;</content><author><name>Architecture Soluction Opensource</name></author><category term="Blog" /><summary type="html">#oss guide 시작??</summary></entry></feed>

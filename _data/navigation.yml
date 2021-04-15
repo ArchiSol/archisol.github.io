@@ -1,0 +1,40 @@
+# main links
+main:
+  - title: "Projects"
+    url: /projects/
+  - title: "Guide"
+    url: /docs/organization/
+  - title: "Blog"
+    url: /year-archive/
+  - title: "Events"
+    url: https://github.com/architecture-solution/
+  - title: "GitHub"
+    url: https://github.com/architecture-solution/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+
+docs:
+  - title: "오픈소스 시작하기"
+    children:
+      - title: "조직구성"
+        url: /docs/organization/
+      - title: "라이선스"
+        url: /docs/license/
+      - title: "프로젝트 환경구성"
+        url: /docs/setupossenv/  
+  - title: "오픈소스 기여하기"
+    children:
+      - title: "기여 Rule"
+        url: /docs/configuration/
+      - title: "기여절차"
+        url: /docs/overriding-theme-defaults/
+  - title: "오픈소스 공개하기"
+    children:
+      - title: "공개 절차"
+        url: /docs/configuration/
