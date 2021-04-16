@@ -4,7 +4,7 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/home_main_image.PNG
+  overlay_image: /assets/images/bg_01_white.png
   # actions:
   #   - label: "<i class='fas fa-download'></i> Install now"
   #     url: "/docs/quick-start-guide/"
@@ -12,10 +12,10 @@ excerpt: >
   Perfect for building easy and simple software architecture.<br /><br />
   
 feature_row:
-  - image_path: /assets/images/devon_logo.PNG
+  - image_path: /assets/images/elena_logo_text.png
     alt: "customizable"
-    title: "LENA Opensource Community"
-    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
+    title: ""
+    excerpt: "LENA - Middleware Solution, Opensource community"
     url: "https://github.com/lenaosc"
     btn_class: "btn--small"
     btn_label: "GitHub"

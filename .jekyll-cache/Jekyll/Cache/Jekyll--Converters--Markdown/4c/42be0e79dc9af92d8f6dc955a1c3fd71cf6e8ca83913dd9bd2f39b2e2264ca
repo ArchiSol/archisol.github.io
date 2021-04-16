@@ -1,0 +1,43 @@
+I"o
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/elena_logo_text.png" alt="customizable" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title"></h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>LENA - Middleware Solution, Opensource community</p>
+
+            </div>
+          
+
+          
+            <p>
+            
+              <a href="https://github.com/lenaosc" class="btn btn--small">GitHub</a>
+            
+            
+              <a href="https://lenaosc.github.io" class="btn btn--small">WebSite</a>
+            
+            </p>
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+:ET

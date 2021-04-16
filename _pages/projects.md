@@ -12,16 +12,16 @@ excerpt: >
   A flexible two-column Jekyll theme. Perfect for building personal sites, blogs, and portfolios.<br />
   <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.22.0">Latest release v4.22.0</a></small>
 feature_row:
-  - image_path: /assets/images/devon_logo.PNG
+  - image_path: /assets/images/elena_logo_text.png
     alt: "customizable"
-    title: "LENA Opensource Community"
-    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
+    title: ""
+    excerpt: "LENA - Middleware Solution, Opensource community"
     url: "https://github.com/lenaosc"
     btn_class: "btn--small"
     btn_label: "GitHub"
     url1: "https://lenaosc.github.io"
     btn_class1: "btn--small"
-    btn_label1: "WebSite"      
+    btn_label1: "WebSite"    
 ---
 
 {% include feature_row %}

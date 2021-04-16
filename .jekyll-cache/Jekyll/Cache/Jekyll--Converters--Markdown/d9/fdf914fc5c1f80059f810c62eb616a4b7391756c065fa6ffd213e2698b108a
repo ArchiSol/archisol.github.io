@@ -1,4 +1,4 @@
-I"�
+I"�
 <p>오픈소스 개발환경은 GitHub를 중심으로 수많은 오픈소스 서비스들로 구성되어있다. GitHub 기능만으로도 
 프로젝트 계획, 소스관리, 문서관리, 웹사이트, CI/CD 까지 거의 모든 환경구성을 진행할 수 있다. 
 또한 Travis CI, Circle CI, Codecov, Slack, Sonarcloud, telegram 등 수많은 서비스와 연동하여
@@ -34,14 +34,11 @@ codecov 설명</p>
 <h3 id="release">Release</h3>
 <p>Build 에 의해 생성된 jar, war, static website, 문서 등 결과물을 배포한다.
 유형에 따라 Maven, Artifactory, GitHub Page 등에 배포된다.<br />
-artifactory 설명<br />
-page 설명</p>
+artifactory 설명</p>
 
 <h3 id="feedback">Feedback</h3>
 <p>오픈소스에서 커뮤니티를 운영하는것은 가장 중요한 작업중 하나다. 커뮤니티의 활성화에 따라 사용자 / 기여자 의 참여율이 달라진다.
-여러가지 Feedback 경로를 통해 사용자들의 의견을 청취하고, 반영해야한다.<br />
-issue 설명<br />
-google groups 설명</p>
+여러가지 Feedback 경로를 통해 사용자들의 의견을 청취하고, 반영해야한다.</p>
 
-<h2 id="참고">참고</h2>
+<p><strong><em>환경 구성 관련하여 유용한 자료들은 Blog 를 통해 지속적으로 업로드할 예정임</em></strong></p>
 :ET
