@@ -31,12 +31,11 @@ toc: true
 
 ### Integration
 오픈소스 전반에 걸쳐 프로젝트 통합작업을 수행한다. Build / Testing / Release 가 대표적인 작업이다.
-Github Action, [Travis]({{ "/travis/" | relative_url }}), Circle CI 를 많이 사용하는 추세이다.  
+[Github Action]({{ "/github-action/" | relative_url }}), [Travis]({{ "/travis/" | relative_url }}), Circle CI 를 많이 사용하는 추세이다.  
 
 ### Build
 library packaging, testing, code quality 분석등 다양한 작업이 Build 를 통해 진행된다.
 Pull Request, Merge, Push 등 다양한 시점에 자동으로 트리거되도록 설정할 수 있다.  
-Gradle 설명
 
 ### Verify
 Code Quality, Testing 작업을 진행한다. 이를 통해 오픈소스의 완성도를 높일 수 있다.

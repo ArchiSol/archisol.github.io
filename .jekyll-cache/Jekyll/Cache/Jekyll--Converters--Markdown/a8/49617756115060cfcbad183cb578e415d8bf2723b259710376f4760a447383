@@ -1,4 +1,4 @@
-I"�<p>GitHub Action 은 소프트웨어 개발 워크플로우를 자동화하는 도구이다. 
+I"K<p>GitHub Action 은 소프트웨어 개발 워크플로우를 자동화하는 도구이다. 
 Github 에서 Pull Reqeust, Issue 생성, Merge 등의 이벤트가 생성했을때 Action 을 통해 워크플로우를 수행할 수 있다.
 기존에는 Travis 나 Circle 과 같은 CI 도구를 많이 사용하였으나 관리를 위해 GitHub 와 다른 서비스 페이지를 이동해야 하는 불편이 있었다.
 이제는 GitHub 에서 직접 Action 서비스를 시작하면서, GitHub 안에서 CI/CD 작업이 가능해졌다.
@@ -7,10 +7,11 @@ Github Marketplace 를 통해 다른 사용자들이 공개한 Action 을 바로
 
 <h2 id="action-생성">Action 생성</h2>
 <p>대부분의 작업은 Marketplace 에서 참조하여 사용이 가능하다. 하지만 추가적인 작업이 필요한경우 개인이 자신만의 Action 을 만들수도 있다. Docker Image 나 Java Script 를 사용하여 Action 을 생성할 수 있다.
-자세한 내용은 <a href="https://falsy.me/github-actions-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-2-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%95%A1%EC%85%98-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EA%B9%83%ED%97%88%EB%B8%8C-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A0%88/">Falsy Lab 의 Blog</a> 를 확인하면 쉽게 따라갈 수 있따.</p>
+자세한 내용은 <a href="https://falsy.me/github-actions-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-2-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%95%A1%EC%85%98-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EA%B9%83%ED%97%88%EB%B8%8C-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A0%88/">Falsy Lab 의 Blog</a> 에서 확인할 수 있다.</p>
 
 <h2 id="workflow-생성">Workflow 생성</h2>
-<p>.github/workflows 디렉토리에 yml 을 작성하면 GitHub Action 에서 인식하여 Event 발생시 자동으로 해당하는 workflow 를 실행한다.</p>
+<p>.github/workflows 디렉토리에 yml 을 작성하면 GitHub Action 에서 인식하여 Event 발생시 자동으로 해당하는 workflow 를 실행한다.<br />
+Youtube 강좌 : <a href="https://www.youtube.com/watch?v=R8_veQiYBjI&amp;ab_channel=TechWorldwithNana">GitHub Actions Tutorial - Basic Concepts and CI/CD Pipeline with Docker</a></p>
 
 <ul>
   <li>Sample Workflow - Artifact  생성 / Upload</li>
@@ -50,5 +51,6 @@ Github Marketplace 를 통해 다른 사용자들이 공개한 Action 을 바로
 </code></pre></div></div>
 
 <h2 id="참고">참고</h2>
-<p><a href="https://www.youtube.com/watch?v=R8_veQiYBjI&amp;ab_channel=TechWorldwithNana">GitHub Actions Tutorial - Basic Concepts and CI/CD Pipeline with Docker</a></p>
+<p><a href="https://www.youtube.com/watch?v=R8_veQiYBjI&amp;ab_channel=TechWorldwithNana">GitHub Actions Tutorial - Basic Concepts and CI/CD Pipeline with Docker</a><br />
+<a href="https://falsy.me/github-actions-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-2-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%95%A1%EC%85%98-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EA%B9%83%ED%97%88%EB%B8%8C-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A0%88/">Falsy Lab 의 Blog</a></p>
 :ET
