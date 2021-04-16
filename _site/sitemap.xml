@@ -41,6 +41,14 @@
 <lastmod>2021-04-16T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://10.81.208.53:8999/github-action/</loc>
+<lastmod>2021-04-16T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://10.81.208.53:8999/github-issue-project/</loc>
+<lastmod>2021-04-16T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://10.81.208.53:8999/sonarcloud-travis/</loc>
 <lastmod>2021-04-16T00:00:00+09:00</lastmod>
 </url>

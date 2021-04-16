@@ -59,6 +59,18 @@ var store = [{
         "url": "/gatsby/",
         "teaser": null
       },{
+        "title": "GitHub Action",
+        "excerpt":"GitHub Action 은 소프트웨어 개발 워크플로우를 자동화하는 도구이다. Github 에서 Pull Reqeust, Issue 생성, Merge 등의 이벤트가 생성했을때 Action 을 통해 워크플로우를 수행할 수 있다. 기존에는 Travis 나 Circle 과 같은 CI 도구를 많이 사용하였으나 관리를 위해 GitHub 와 다른 서비스 페이지를 이동해야 하는 불편이 있었다. 이제는 GitHub 에서 직접...","categories": [],
+        "tags": ["Blog"],
+        "url": "/github-action/",
+        "teaser": null
+      },{
+        "title": "GitHub Issue & Project",
+        "excerpt":"Issue 프로젝트 내부적으로 Issue 를 통해 요구사항 / 진적사항 관리가 가능하며, 사용자들이 문의를 올리거나, Bug 리포팅하는 공간으로도 사용이 가능하다. Github 에서 Issue 번호가 생성되면. Pull Request 부터, Release Note 작업까지 해당 번호를 다양한 방식으로 연동하여 사용할 수 있다. Template GitHub Settings 의 Features 에서 Issue 에 대한 Template 설정이 가능하다....","categories": [],
+        "tags": ["Blog"],
+        "url": "/github-issue-project/",
+        "teaser": null
+      },{
         "title": "SonarCloud - Travis 연동",
         "excerpt":"Code Quality - SonarCloud SonarCloud와 Github연결 SonarCloud 회원가입(https://sonarcloud.io/) Allow to access for github repository get secure key gem install travis travis login --github-token ghp_uS****************wtN0iiSxg travis encrypt SOMEVAR=\"fe7fe6**********e014803dfa8f\" -r giyeonYu/OSS ghp_uS******wtN0iiSxg =&gt; github token fe7fe6****e014803dfa8f =&gt; travis token edit .travis.yml addons: sonarcloud: organization: \"giyeonyu\" token: secure: \"**************************\" # encrypted value of...","categories": [],
         "tags": ["Blog"],

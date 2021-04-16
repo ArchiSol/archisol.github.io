@@ -21,17 +21,17 @@ toc: true
 
 
 ### PLAN
-요구사항 / 진척사항 등 을 관리한다.  
-issue 설명
+[요구사항 / 진척사항]({{ "/github-issue-project/" | relative_url }}) 등 을 관리한다.  
+
 
 ### Develop
 분석 / 설계 / 개발 / 문서화 등이 진행된다. 생성되는 결과물은 Git 과 같은 VCS 를 통해 관리 된다.
-오픈소스 프로젝트에 대한 웹사이트는 일반적으로 Static Site Generator 를 통해 생성하여 관리한다.  
-jekyll 설명
+오픈소스 프로젝트에 대한 웹사이트는 일반적으로 Static Site Generator([Jekyll]({{ "/jekyll/" | relative_url }}), [Gatsby]({{ "/gatsby/" | relative_url }})) 를 통해 생성하여 관리한다.  
+
 
 ### Integration
-오픈소스 전반에 걸쳐 통합한다. Build / Testing / Release 등의 작업이 CI 를 통해 진행된다.  
-github ci 설명
+오픈소스 전반에 걸쳐 프로젝트 통합작업을 수행한다. Build / Testing / Release 가 대표적인 작업이다.
+Github Action, [Travis]({{ "/travis/" | relative_url }}), Circle CI 를 많이 사용하는 추세이다.  
 
 ### Build
 library packaging, testing, code quality 분석등 다양한 작업이 Build 를 통해 진행된다.

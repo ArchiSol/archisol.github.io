@@ -1,0 +1,644 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>GitHub Issue &amp; Project - Architecture Solution Opensource</title>
+<meta name="description" content="Issue 프로젝트 내부적으로 Issue 를 통해 요구사항 / 진적사항 관리가 가능하며, 사용자들이 문의를 올리거나, Bug 리포팅하는 공간으로도 사용이 가능하다.  Github 에서 Issue 번호가 생성되면. Pull Request 부터, Release Note 작업까지 해당 번호를 다양한 방식으로 연동하여 사용할 수 있다.">
+
+
+  <meta name="author" content="Architecture Solution Opensource">
+  
+  <meta property="article:author" content="Architecture Solution Opensource">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Architecture Solution Opensource">
+<meta property="og:title" content="GitHub Issue &amp; Project">
+<meta property="og:url" content="http://10.81.208.53:8999/github-issue-project/">
+
+
+  <meta property="og:description" content="Issue 프로젝트 내부적으로 Issue 를 통해 요구사항 / 진적사항 관리가 가능하며, 사용자들이 문의를 올리거나, Bug 리포팅하는 공간으로도 사용이 가능하다.  Github 에서 Issue 번호가 생성되면. Pull Request 부터, Release Note 작업까지 해당 번호를 다양한 방식으로 연동하여 사용할 수 있다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-04-16T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://10.81.208.53:8999/github-issue-project/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Architecture Solution Opensource",
+      "url": "http://10.81.208.53:8999/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Architecture Solution Opensource Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/ELENA_LOGO_NAME.png" alt=" "></a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/organization/">Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/archisol/">GitHub</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Architecture Solution Opensource</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Architecture Solution Opensource.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Seoul</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="GitHub Issue &amp; Project">
+    <meta itemprop="description" content="Issue프로젝트 내부적으로 Issue 를 통해 요구사항 / 진적사항 관리가 가능하며,사용자들이 문의를 올리거나, Bug 리포팅하는 공간으로도 사용이 가능하다. Github 에서 Issue 번호가 생성되면. Pull Request 부터, Release Note 작업까지 해당 번호를 다양한 방식으로 연동하여 사용할 수 있다.">
+    <meta itemprop="datePublished" content="2021-04-16T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">GitHub Issue &amp; Project
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#issue">Issue</a><ul><li><a href="#template">Template</a></li><li><a href="#label">Label</a></li><li><a href="#milestone">Milestone</a></li></ul></li><li><a href="#project">Project</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="issue">Issue</h2>
+<p>프로젝트 내부적으로 Issue 를 통해 요구사항 / 진적사항 관리가 가능하며,
+사용자들이 문의를 올리거나, Bug 리포팅하는 공간으로도 사용이 가능하다. 
+Github 에서 Issue 번호가 생성되면. Pull Request 부터, Release Note 작업까지 해당 번호를 다양한 방식으로 연동하여 사용할 수 있다.</p>
+
+<h3 id="template">Template</h3>
+<p>GitHub Settings 의 Features 에서 Issue 에 대한 Template 설정이 가능하다. Template 을 설정하면 issue 생성시 자동으로 Template 에 작성한 형식이 붙여진다.
+설정한 내용은 ‘/.github/ISSUE_TEMPLATE/’ 디렉토리에서 확인이 가능하다. 원하는 템플릿을 자유롭개 생성 가능하며, 이슈 유형에 따라 label, assignees 를 지정할 수 있다.</p>
+
+<h3 id="label">Label</h3>
+<p>Issue 마다 Label(bug, enhancement …) 을 지정할 수 있다. Github 에서 제공하는 Label 이 맘에 들지 않는경우 언제든 추가 생성이 가능하다.
+Label 을 잘 달아두면, Release Note 작성시 자동으로 Label 에 따라 이슈를 분기하여 작성이 가능하고. 추후 Issue 검색시에도 용이하다.</p>
+
+<h3 id="milestone">Milestone</h3>
+<p>Milestone 을 생성하고 Issue 를 맵핑하면 진적률 관리가 가능하다. Issue 가 많아질 경우 Issue 화면만으로 진척률을 관리하기는 어렵다.
+Milestone 을 꼭 장성하여 관리하는것이 좋다.</p>
+
+<h2 id="project">Project</h2>
+<p>Kanban 보드를 작성하여 프로젝트의 전체 현황을 파악할 수 있다.
+Project 에 생성한 Card 들을 Issue 로 변환할 수 있으며, 반대로 Issue 를 Kanban 보드에 등록할수도 있다.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#blog" class="page__taxonomy-item" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2021-04-16T00:00:00+09:00">April 16, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=GitHub+Issue+%26+Project%20http%3A%2F%2F10.81.208.53%3A8999%2Fgithub-issue-project%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F10.81.208.53%3A8999%2Fgithub-issue-project%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F10.81.208.53%3A8999%2Fgithub-issue-project%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/github-action/" class="pagination--pager" title="GitHub Action
+">이전</a>
+    
+    
+      <a href="/sonarcloud-travis/" class="pagination--pager" title="SonarCloud - Travis 연동
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/travis/" rel="permalink">Travis
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Travis
+
+  Travis CI, Github계정으로 회원가입
+  연동시킬 Repository 활성화
+  Project root경로에 .travis.yml 작성
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/telegram/" rel="permalink">Github - Telegram 연동
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Telegram Notify
+1.Add ./github/workflow/main.xml for github action
+```yml
+name: telegram message
+on: [push]
+jobs:
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/sonarcloud-travis/" rel="permalink">SonarCloud - Travis 연동
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Code Quality - SonarCloud
+
+  SonarCloud와 Github연결
+  SonarCloud 회원가입(https://sonarcloud.io/)
+  Allow to access for github repository
+  get secure key
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/github-action/" rel="permalink">GitHub Action
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">GitHub Action 은 소프트웨어 개발 워크플로우를 자동화하는 도구이다. 
+Github 에서 Pull Reqeust, Issue 생성, Merge 등의 이벤트가 생성했을때 Action 을 통해 워크플로우를 수행할 수 있다.
+기존에는 Travis 나 Circle 과 같은 CI ...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Architecture Solution Opensource. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

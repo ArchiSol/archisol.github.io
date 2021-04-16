@@ -1,0 +1,54 @@
+I"�<p>GitHub Action 은 소프트웨어 개발 워크플로우를 자동화하는 도구이다. 
+Github 에서 Pull Reqeust, Issue 생성, Merge 등의 이벤트가 생성했을때 Action 을 통해 워크플로우를 수행할 수 있다.
+기존에는 Travis 나 Circle 과 같은 CI 도구를 많이 사용하였으나 관리를 위해 GitHub 와 다른 서비스 페이지를 이동해야 하는 불편이 있었다.
+이제는 GitHub 에서 직접 Action 서비스를 시작하면서, GitHub 안에서 CI/CD 작업이 가능해졌다.
+Github Marketplace 를 통해 다른 사용자들이 공개한 Action 을 바로 활용할 수 있다.
+대부분의 우리가 원한는 작업들이 이미 공개되어있으며, 간단히 조합만으로 새로운 워크플로우를 만들어 사용 할 수 있다.</p>
+
+<h2 id="action-생성">Action 생성</h2>
+<p>대부분의 작업은 Marketplace 에서 참조하여 사용이 가능하다. 하지만 추가적인 작업이 필요한경우 개인이 자신만의 Action 을 만들수도 있다. Docker Image 나 Java Script 를 사용하여 Action 을 생성할 수 있다.
+자세한 내용은 <a href="https://falsy.me/github-actions-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-2-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%95%A1%EC%85%98-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EA%B9%83%ED%97%88%EB%B8%8C-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A0%88/">Falsy Lab 의 Blog</a> 를 확인하면 쉽게 따라갈 수 있따.</p>
+
+<h2 id="workflow-생성">Workflow 생성</h2>
+<p>.github/workflows 디렉토리에 yml 을 작성하면 GitHub Action 에서 인식하여 Event 발생시 자동으로 해당하는 workflow 를 실행한다.</p>
+
+<ul>
+  <li>Sample Workflow - Artifact  생성 / Upload</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">JFrog upload</span> <span class="c1"># Workflow 명</span>
+
+<span class="na">on</span><span class="pi">:</span> <span class="c1"># Event - Workflow trigger 조건</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">master</span> <span class="pi">]</span>
+  <span class="na">pull_request</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">master</span> <span class="pi">]</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build</span><span class="pi">:</span> <span class="c1"># Job id</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span> <span class="c1"># Workflow 수행 환경 (ubuntu, mac, window 가능)</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span> <span class="c1"># code check out -&gt; actions 에서 제공하는 공식 checkout 소스</span>
+                                  <span class="c1">#                    https://github.com/actions/checkout</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set up JDK </span><span class="m">11</span>       <span class="c1"># Java 설치</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-java@v1</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">java-version</span><span class="pi">:</span> <span class="m">11</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Grant execute permission for gradlew</span> <span class="c1"># Gradle 수행권한 설정</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">chmod +x gradlew</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build Jar</span> <span class="c1"># Gradle Build 수행</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">./gradlew build</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Upload Artifact to JFrog</span> <span class="c1"># JForg Upload 수행</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">katcosgrove/jfrogcli-action@v1.0.0-beta</span> <span class="c1"># katcosgrove 라는 개인이 생성한 action</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">cmd</span><span class="pi">:</span> <span class="s1">'</span><span class="s">u</span><span class="nv"> </span><span class="s">"build/libs/opensourceenv-1.0-SNAPSHOT.jar"</span><span class="nv"> </span><span class="s">"sampleRepo/opensourceenv/"</span><span class="nv"> </span><span class="s">--recursive=false'</span>
+        <span class="na">env</span><span class="pi">:</span>
+          <span class="na">auth</span><span class="pi">:</span> <span class="s1">'</span><span class="s">username'</span>
+          <span class="na">user</span><span class="pi">:</span> <span class="s">$</span>  <span class="c1"># Github Settings 에 등록한 secret 참조</span>
+          <span class="na">pass</span><span class="pi">:</span> <span class="s">$</span>
+          <span class="na">url</span><span class="pi">:</span> <span class="s1">'</span><span class="s">https://opensourceenv.jfrog.io/artifactory/'</span>
+</code></pre></div></div>
+
+<h2 id="참고">참고</h2>
+<p><a href="https://www.youtube.com/watch?v=R8_veQiYBjI&amp;ab_channel=TechWorldwithNana">GitHub Actions Tutorial - Basic Concepts and CI/CD Pipeline with Docker</a></p>
+:ET
