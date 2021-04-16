@@ -17,7 +17,19 @@ var store = [{
         "url": "/docs/setupossenv/",
         "teaser": null
       },{
-        "title": "Code Coverage",
+        "title": "기여 Rule",
+        "excerpt":"CLA서명 모든 Contributor는 CLA(Contributor License Agreement)에 서명해야 한다. Contributor의 저작물을 관리하면서 관리할 수 있는 저작권 분쟁을 줄이기 위해 Contributor에게 동의를 구하는 약정서이다. 이를 완료해야만 Contributor가 될 수 있다. 저작권 수정되는 파일의 상단에 아래와 같이 저작권과 라이선스가 표시되어야 한다. Copyright*** Apache License 2.0 지식재산 민감한 정보, 특허 등 기업의 지식재산 노출이...","categories": [],
+        "tags": [],
+        "url": "/docs/contribution-rule/",
+        "teaser": null
+      },{
+        "title": "기여절차",
+        "excerpt":"Issue 생성 및 관리 Issue유형 프로그램 버그 프로그램 개선사항 및 아이디어 일반 문의 생성 및 관리 Issue를 생성하고 관리할 수 있는 Tools(Git-Issue, jira 등)를 사전에 정의하라 식별된 Issue에 대해 중복으로 등록이 되는 것을 막아라 Issue Template을 작성하여 일관성있는 Issue Format을 유지하라 Issue Label을 생성하여 Issue를 효율적으로 Pull Request Pull Request는...","categories": [],
+        "tags": [],
+        "url": "/docs/contribution-process/",
+        "teaser": null
+      },{
+        "title": "Codecov - Github Action 연동",
         "excerpt":"Code Coverage Code Coverage 는 테스트를 진행했을때 코드 자체가 얼마나 실행되었는지 측정하는 것이다. 코드는 구문(Statement), 조건(Condition), 결정(Decision) 으로 이루어진다. 이 세가지 항목을 얼마나 커버했느냐에 따라 측정값이 달라진다. 일반적으로 많이 사용되는 커버리지는 구문(Statement)커버리지이며, 실행 코드라인이 한번 이상 실행 되면 충족된다. 조건(Condition)커버리지는 각 내부 조건이 참 혹은 거짓을 가지면 충족된다. 결정(Decision) 커버리지는...","categories": [],
         "tags": ["Blog"],
         "url": "/code-coverage/",
@@ -33,5 +45,35 @@ var store = [{
         "excerpt":"Jekyll은 개인 프로젝트 또는 조직 사이트에 적합한 정적 사이트 생성기 입니다. Jekyll 은 콘텐츠를 가져와 Markdown 및 Liquid 템플릿을 렌더링하여 웹사이트를 생성합니다. 기본적으로 Jekyll 은 Ruby 로 만들어져 있으나, 운영하는데 Ruby 를 공부할 필요는 없습니다. 간단히 Markdown 을 생성 수정하는것 만으로 웹사이트를 운영할 수 있습니다. 또한 GitHub 와 강력히 연동되어...","categories": [],
         "tags": ["Blog"],
         "url": "/jekyll/",
+        "teaser": null
+      },{
+        "title": "Codecove - Travis 연동",
+        "excerpt":"Code Coverage - CodeCov     codecov 사이트 가입 후 repository 활성화   travis.yml script추가   script: \"mvn cobertura:cobertura\" after_success:   - bash &lt;(curl -s https://codecov.io/bash)   - codecov env:    - CODECOV_TOME=583d22f4-1c33-4b5f-91ad-a370a0290fab     pom.xml plugin 추가   &lt;plugin&gt; \t&lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt; \t&lt;artifactId&gt;cobertura-maven-plugin&lt;/artifactId&gt; \t&lt;version&gt;2.7&lt;/version&gt; \t&lt;configuration&gt; \t\t&lt;formats&gt; \t\t\t&lt;format&gt;html&lt;/format&gt; \t\t\t&lt;format&gt;xml&lt;/format&gt; \t\t&lt;/formats&gt; \t\t&lt;check /&gt; \t&lt;/configuration&gt; &lt;/plugin&gt;  ","categories": [],
+        "tags": ["Blog"],
+        "url": "/code-coverage-codecov-with-travis/",
+        "teaser": null
+      },{
+        "title": "Gatsby",
+        "excerpt":"Site - Gatsby Static Site Generator Gatsby Starter Template사이트에 방문하여 원하는 Template 설치 https://www.gatsbyjs.com/starters/ # Insatllation with 'git clone' git clone git@github.com:&lt;user&gt;/&lt;repository&gt; my-site cd my-site # Installation dependency yarn insatll # To develop yarn develop # To build yarn build # To start gatsby develop Git Repository에 Push Git Page...","categories": [],
+        "tags": ["Blog"],
+        "url": "/gatsby/",
+        "teaser": null
+      },{
+        "title": "SonarCloud - Travis 연동",
+        "excerpt":"Code Quality - SonarCloud SonarCloud와 Github연결 SonarCloud 회원가입(https://sonarcloud.io/) Allow to access for github repository get secure key gem install travis travis login --github-token ghp_uS****************wtN0iiSxg travis encrypt SOMEVAR=\"fe7fe6**********e014803dfa8f\" -r giyeonYu/OSS ghp_uS******wtN0iiSxg =&gt; github token fe7fe6****e014803dfa8f =&gt; travis token edit .travis.yml addons: sonarcloud: organization: \"giyeonyu\" token: secure: \"**************************\" # encrypted value of...","categories": [],
+        "tags": ["Blog"],
+        "url": "/sonarcloud-travis/",
+        "teaser": null
+      },{
+        "title": "Github - Telegram 연동",
+        "excerpt":"Telegram Notify 1.Add ./github/workflow/main.xml for github action name: telegram message on: [push] jobs: build: name: Build runs-on: ubuntu-latest steps: - uses: actions/checkout@master - name: send custom message uses: appleboy/telegram-action@master with: to: $ token: $ message: | The $ event triggered final step. echo This event is a pull request that...","categories": [],
+        "tags": ["Blog"],
+        "url": "/telegram/",
+        "teaser": null
+      },{
+        "title": "Travis",
+        "excerpt":"Travis Travis CI, Github계정으로 회원가입 연동시킬 Repository 활성화 Project root경로에 .travis.yml 작성 language: java jdk: - openjdk11 # using jdk11 at least for sonarcloud branches: only: - master # Travis CI 서버의 Home cache: directories: - $HOME/.m2 # CI 실행 완료시 메일로 알람 notifications: email: recipients: - your@Email.com Github Readme.md에...","categories": [],
+        "tags": ["Blog"],
+        "url": "/travis/",
         "teaser": null
       }]

@@ -6,10 +6,10 @@ main:
     url: /docs/organization/
   - title: "Blog"
     url: /year-archive/
-  - title: "Events"
-    url: https://github.com/architecture-solution/
+#  - title: "Events"
+#    url: https://github.com/architecture-solution/
   - title: "GitHub"
-    url: https://github.com/architecture-solution/
+    url: https://github.com/archisol/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
@@ -31,9 +31,9 @@ docs:
   - title: "오픈소스 기여하기"
     children:
       - title: "기여 Rule"
-        url: /docs/configuration/
+        url: /docs/contribution-rule/
       - title: "기여절차"
-        url: /docs/overriding-theme-defaults/
+        url: /docs/contribution-process/
   - title: "오픈소스 공개하기"
     children:
       - title: "공개 절차"

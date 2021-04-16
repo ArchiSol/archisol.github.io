@@ -1,4 +1,142 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://10.81.208.53:8999/feed.xml" rel="self" type="application/atom+xml" /><link href="http://10.81.208.53:8999/" rel="alternate" type="text/html" /><updated>2021-04-15T17:57:38+09:00</updated><id>http://10.81.208.53:8999/feed.xml</id><title type="html">Architecture Soluction Opensource</title><subtitle>Architecture Soluction Opensource.</subtitle><author><name>Architecture Soluction Opensource</name></author><entry><title type="html">Jekyll</title><link href="http://10.81.208.53:8999/jekyll/" rel="alternate" type="text/html" title="Jekyll" /><published>2021-04-14T00:00:00+09:00</published><updated>2021-04-14T00:00:00+09:00</updated><id>http://10.81.208.53:8999/jekyll</id><content type="html" xml:base="http://10.81.208.53:8999/jekyll/">&lt;p&gt;Jekyll은 개인 프로젝트 또는 조직 사이트에 적합한 정적 사이트 생성기 입니다. Jekyll 은 콘텐츠를 가져와 Markdown 및 Liquid 템플릿을 렌더링하여 웹사이트를 생성합니다. 기본적으로 Jekyll 은 Ruby 로 만들어져 있으나, 운영하는데 Ruby 를 공부할 필요는 없습니다.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://10.81.208.53:8999/feed.xml" rel="self" type="application/atom+xml" /><link href="http://10.81.208.53:8999/" rel="alternate" type="text/html" /><updated>2021-04-16T10:25:34+09:00</updated><id>http://10.81.208.53:8999/feed.xml</id><title type="html">Architecture Solution Opensource</title><subtitle>Architecture Solution Opensource.</subtitle><author><name>Architecture Solution Opensource</name></author><entry><title type="html">Codecove - Travis 연동</title><link href="http://10.81.208.53:8999/code-coverage-codecov-with-travis/" rel="alternate" type="text/html" title="Codecove - Travis 연동" /><published>2021-04-16T00:00:00+09:00</published><updated>2021-04-16T00:00:00+09:00</updated><id>http://10.81.208.53:8999/code-coverage-codecov-with-travis</id><content type="html" xml:base="http://10.81.208.53:8999/code-coverage-codecov-with-travis/">&lt;h2 id=&quot;code-coverage---codecov&quot;&gt;Code Coverage - CodeCov&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;codecov 사이트 가입 후 repository 활성화&lt;/li&gt;
+  &lt;li&gt;travis.yml script추가&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mvn&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;cobertura:cobertura&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;after_success&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bash &amp;lt;(curl -s https://codecov.io/bash)&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;codecov&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+   &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;CODECOV_TOME=583d22f4-1c33-4b5f-91ad-a370a0290fab&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;pom.xml plugin 추가&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;plugin&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.codehaus.mojo&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;cobertura-maven-plugin&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.7&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;&amp;lt;formats&amp;gt;&lt;/span&gt;
+			&lt;span class=&quot;nt&quot;&gt;&amp;lt;format&amp;gt;&lt;/span&gt;html&lt;span class=&quot;nt&quot;&gt;&amp;lt;/format&amp;gt;&lt;/span&gt;
+			&lt;span class=&quot;nt&quot;&gt;&amp;lt;format&amp;gt;&lt;/span&gt;xml&lt;span class=&quot;nt&quot;&gt;&amp;lt;/format&amp;gt;&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;&amp;lt;/formats&amp;gt;&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;&amp;lt;check&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/plugin&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Architecture Solution Opensource</name></author><category term="Blog" /><summary type="html">Code Coverage - CodeCov codecov 사이트 가입 후 repository 활성화 travis.yml script추가</summary></entry><entry><title type="html">Gatsby</title><link href="http://10.81.208.53:8999/gatsby/" rel="alternate" type="text/html" title="Gatsby" /><published>2021-04-16T00:00:00+09:00</published><updated>2021-04-16T00:00:00+09:00</updated><id>http://10.81.208.53:8999/gatsby</id><content type="html" xml:base="http://10.81.208.53:8999/gatsby/">&lt;h1 id=&quot;site---gatsby-static-site-generator&quot;&gt;Site - Gatsby Static Site Generator&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Gatsby Starter Template사이트에 방문하여 원하는 Template 설치 
+https://www.gatsbyjs.com/starters/
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Insatllation with 'git clone'&lt;/span&gt;
+git clone git@github.com:&amp;lt;user&amp;gt;/&amp;lt;repository&amp;gt; my-site
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;my-site
+&lt;span class=&quot;c&quot;&gt;# Installation dependency&lt;/span&gt;
+yarn insatll       
+&lt;span class=&quot;c&quot;&gt;# To develop&lt;/span&gt;
+yarn develop
+&lt;span class=&quot;c&quot;&gt;# To build&lt;/span&gt;
+yarn build
+&lt;span class=&quot;c&quot;&gt;# To start&lt;/span&gt;
+gatsby develop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Git Repository에 Push&lt;/li&gt;
+  &lt;li&gt;Git Page 연동
+    &lt;ul&gt;
+      &lt;li&gt;해당 repository의 Settings&lt;/li&gt;
+      &lt;li&gt;Pages에서 해당 branch, root 로 설정하여 저장
+&lt;img src=&quot;https://user-images.githubusercontent.com/20086137/114368273-36c37900-9bb8-11eb-9d9b-e090513ce31c.png&quot; alt=&quot;image&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Architecture Solution Opensource</name></author><category term="Blog" /><summary type="html">Site - Gatsby Static Site Generator Gatsby Starter Template사이트에 방문하여 원하는 Template 설치 https://www.gatsbyjs.com/starters/ # Insatllation with 'git clone' git clone git@github.com:&amp;lt;user&amp;gt;/&amp;lt;repository&amp;gt; my-site cd my-site # Installation dependency yarn insatll # To develop yarn develop # To build yarn build # To start gatsby develop Git Repository에 Push Git Page 연동 해당 repository의 Settings Pages에서 해당 branch, root 로 설정하여 저장</summary></entry><entry><title type="html">SonarCloud - Travis 연동</title><link href="http://10.81.208.53:8999/sonarcloud-travis/" rel="alternate" type="text/html" title="SonarCloud - Travis 연동" /><published>2021-04-16T00:00:00+09:00</published><updated>2021-04-16T00:00:00+09:00</updated><id>http://10.81.208.53:8999/sonarcloud-travis</id><content type="html" xml:base="http://10.81.208.53:8999/sonarcloud-travis/">&lt;h1 id=&quot;code-quality---sonarcloud&quot;&gt;Code Quality - SonarCloud&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;SonarCloud와 Github연결&lt;/li&gt;
+  &lt;li&gt;SonarCloud 회원가입(https://sonarcloud.io/)&lt;/li&gt;
+  &lt;li&gt;Allow to access for github repository&lt;/li&gt;
+  &lt;li&gt;get secure key&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;travis
+travis login &lt;span class=&quot;nt&quot;&gt;--github-token&lt;/span&gt; ghp_uS&lt;span class=&quot;k&quot;&gt;****************&lt;/span&gt;wtN0iiSxg
+travis encrypt &lt;span class=&quot;nv&quot;&gt;SOMEVAR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;fe7fe6**********e014803dfa8f&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; giyeonYu/OSS
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;ghp_uS&lt;strong&gt;**&lt;/strong&gt;&lt;strong&gt;**&lt;/strong&gt;&lt;strong&gt;**wtN0iiSxg =&amp;gt; github token
+fe7fe6&lt;/strong&gt;&lt;strong&gt;**&lt;/strong&gt;**e014803dfa8f =&amp;gt; travis token&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;edit .travis.yml&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;addons&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;sonarcloud&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;organization&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;giyeonyu&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;token&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;secure&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;**************************&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# encrypted value of your token&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.login=c1a58ac2e42e06851dd4e9c8de969a76a1d53a1f&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;sonarcloud needs over jdk11 at least.&lt;/p&gt;</content><author><name>Architecture Solution Opensource</name></author><category term="Blog" /><summary type="html">Code Quality - SonarCloud SonarCloud와 Github연결 SonarCloud 회원가입(https://sonarcloud.io/) Allow to access for github repository get secure key</summary></entry><entry><title type="html">Github - Telegram 연동</title><link href="http://10.81.208.53:8999/telegram/" rel="alternate" type="text/html" title="Github - Telegram 연동" /><published>2021-04-16T00:00:00+09:00</published><updated>2021-04-16T00:00:00+09:00</updated><id>http://10.81.208.53:8999/telegram</id><content type="html" xml:base="http://10.81.208.53:8999/telegram/">&lt;h1 id=&quot;telegram-notify&quot;&gt;Telegram Notify&lt;/h1&gt;
+&lt;p&gt;1.Add ./github/workflow/main.xml for github action&lt;/p&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;telegram message&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+
+  &lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Build&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ubuntu-latest&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/checkout@master&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;send custom message&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;appleboy/telegram-action@master&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;token&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;|&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;The $ event triggered final step.&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;echo This event is a pull request that had an assignee removed.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;2.Add repository secrets&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Settings -&amp;gt;  Secrets&lt;/li&gt;
+  &lt;li&gt;TELEGRAM_TO, TELEGRAM_TOKEN 생성&lt;/li&gt;
+  &lt;li&gt;guide to get TELEGRAM_TO, TELEGRAM_TOKEN (https://core.telegram.org/bots/api)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Architecture Solution Opensource</name></author><category term="Blog" /><summary type="html">Telegram Notify 1.Add ./github/workflow/main.xml for github action ```yml name: telegram message on: [push] jobs:</summary></entry><entry><title type="html">Travis</title><link href="http://10.81.208.53:8999/travis/" rel="alternate" type="text/html" title="Travis" /><published>2021-04-16T00:00:00+09:00</published><updated>2021-04-16T00:00:00+09:00</updated><id>http://10.81.208.53:8999/travis</id><content type="html" xml:base="http://10.81.208.53:8999/travis/">&lt;h2 id=&quot;travis&quot;&gt;Travis&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Travis CI, Github계정으로 회원가입&lt;/li&gt;
+  &lt;li&gt;연동시킬 Repository 활성화&lt;/li&gt;
+  &lt;li&gt;Project root경로에 .travis.yml 작성&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;na&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;java&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;jdk&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;openjdk11&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# using jdk11 at least for sonarcloud&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;only&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;master&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Travis CI 서버의 Home&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;directories&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$HOME/.m2&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# CI 실행 완료시 메일로 알람&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;notifications&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;recipients&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your@Email.com&lt;/span&gt;
+      
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Github Readme.md에 Travis badge 추가&lt;/li&gt;
+  &lt;li&gt;참고 사이트  https://velog.io/@recordsbeat/travis-ci-maven-%EC%97%B0%EB%8F%99&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Architecture Solution Opensource</name></author><category term="Blog" /><summary type="html">Travis Travis CI, Github계정으로 회원가입 연동시킬 Repository 활성화 Project root경로에 .travis.yml 작성</summary></entry><entry><title type="html">Jekyll</title><link href="http://10.81.208.53:8999/jekyll/" rel="alternate" type="text/html" title="Jekyll" /><published>2021-04-14T00:00:00+09:00</published><updated>2021-04-14T00:00:00+09:00</updated><id>http://10.81.208.53:8999/jekyll</id><content type="html" xml:base="http://10.81.208.53:8999/jekyll/">&lt;p&gt;Jekyll은 개인 프로젝트 또는 조직 사이트에 적합한 정적 사이트 생성기 입니다. Jekyll 은 콘텐츠를 가져와 Markdown 및 Liquid 템플릿을 렌더링하여 웹사이트를 생성합니다. 기본적으로 Jekyll 은 Ruby 로 만들어져 있으나, 운영하는데 Ruby 를 공부할 필요는 없습니다.
 간단히 Markdown 을 생성 수정하는것 만으로 웹사이트를 운영할 수 있습니다. 또한 GitHub 와 강력히 연동되어 있습니다.
 GitHub 에 Markdown 파일을 push 하기만 하면 Github Page 에서 자동으로 웹페이지를 업데이트해 줍니다.&lt;/p&gt;
 
@@ -30,7 +168,7 @@ Minimal-Mistakes 관련 상세 설정은 &lt;a href=&quot;https://mmistakes.gith
 &lt;p&gt;&lt;a href=&quot;https://jekyllrb-ko.github.io/&quot;&gt;Jekyll 공식&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/&quot;&gt;Minimal Mistakes&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://devinlife.com/howto/&quot;&gt;취미로 코딩하는 개발자 - github page 따라하기&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://ansohxxn.github.io/blog/jekyll-directory-structure/&quot;&gt;공부하는 식빵맘&lt;/a&gt;&lt;/p&gt;</content><author><name>Architecture Soluction Opensource</name></author><category term="Blog" /><summary type="html">Jekyll은 개인 프로젝트 또는 조직 사이트에 적합한 정적 사이트 생성기 입니다. Jekyll 은 콘텐츠를 가져와 Markdown 및 Liquid 템플릿을 렌더링하여 웹사이트를 생성합니다. 기본적으로 Jekyll 은 Ruby 로 만들어져 있으나, 운영하는데 Ruby 를 공부할 필요는 없습니다. 간단히 Markdown 을 생성 수정하는것 만으로 웹사이트를 운영할 수 있습니다. 또한 GitHub 와 강력히 연동되어 있습니다. GitHub 에 Markdown 파일을 push 하기만 하면 Github Page 에서 자동으로 웹페이지를 업데이트해 줍니다.</summary></entry><entry><title type="html">Code Coverage</title><link href="http://10.81.208.53:8999/code-coverage/" rel="alternate" type="text/html" title="Code Coverage" /><published>2021-04-03T00:00:00+09:00</published><updated>2021-04-03T00:00:00+09:00</updated><id>http://10.81.208.53:8999/code-coverage</id><content type="html" xml:base="http://10.81.208.53:8999/code-coverage/">&lt;h2 id=&quot;code-coverage&quot;&gt;Code Coverage&lt;/h2&gt;
+&lt;a href=&quot;https://ansohxxn.github.io/blog/jekyll-directory-structure/&quot;&gt;공부하는 식빵맘&lt;/a&gt;&lt;/p&gt;</content><author><name>Architecture Solution Opensource</name></author><category term="Blog" /><summary type="html">Jekyll은 개인 프로젝트 또는 조직 사이트에 적합한 정적 사이트 생성기 입니다. Jekyll 은 콘텐츠를 가져와 Markdown 및 Liquid 템플릿을 렌더링하여 웹사이트를 생성합니다. 기본적으로 Jekyll 은 Ruby 로 만들어져 있으나, 운영하는데 Ruby 를 공부할 필요는 없습니다. 간단히 Markdown 을 생성 수정하는것 만으로 웹사이트를 운영할 수 있습니다. 또한 GitHub 와 강력히 연동되어 있습니다. GitHub 에 Markdown 파일을 push 하기만 하면 Github Page 에서 자동으로 웹페이지를 업데이트해 줍니다.</summary></entry><entry><title type="html">Codecov - Github Action 연동</title><link href="http://10.81.208.53:8999/code-coverage/" rel="alternate" type="text/html" title="Codecov - Github Action 연동" /><published>2021-04-03T00:00:00+09:00</published><updated>2021-04-03T00:00:00+09:00</updated><id>http://10.81.208.53:8999/code-coverage</id><content type="html" xml:base="http://10.81.208.53:8999/code-coverage/">&lt;h2 id=&quot;code-coverage&quot;&gt;Code Coverage&lt;/h2&gt;
 &lt;p&gt;Code Coverage 는 테스트를 진행했을때 코드 자체가 얼마나 실행되었는지 측정하는 것이다.
 코드는 구문(Statement), 조건(Condition), 결정(Decision) 으로 이루어진다. 이 세가지 항목을 얼마나 커버했느냐에 따라 측정값이 달라진다. 일반적으로 많이 사용되는 커버리지는 구문(Statement)커버리지이며, 실행 코드라인이 한번 이상 실행 되면 충족된다. 조건(Condition)커버리지는 각 내부 조건이 참 혹은 거짓을 가지면 충족된다. 결정(Decision) 커버리지는 각 분기의 내부 조건자체가 아닌 이러한 조건으로 인해 전체 결과가 참 혹은 거짓이면 충족된다.&lt;/p&gt;
 
@@ -148,4 +286,4 @@ gradle test jacocoTestReport jacocoTestCoverageVerification
 &lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://docs.gradle.org/current/userguide/jacoco_plugin.html&quot;&gt;JaCoCo-Gradle 공식&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://woowabros.github.io/experience/2020/02/02/jacoco-config-on-gradle-project.html&quot;&gt;JaCoCo-우아한형제들 블로그&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://woowacourse.github.io/javable/post/2020-10-24-code-coverage/&quot;&gt;CodeCoverage-우아한테크코스&lt;/a&gt;&lt;/p&gt;</content><author><name>Architecture Soluction Opensource</name></author><category term="Blog" /><summary type="html">Code Coverage Code Coverage 는 테스트를 진행했을때 코드 자체가 얼마나 실행되었는지 측정하는 것이다. 코드는 구문(Statement), 조건(Condition), 결정(Decision) 으로 이루어진다. 이 세가지 항목을 얼마나 커버했느냐에 따라 측정값이 달라진다. 일반적으로 많이 사용되는 커버리지는 구문(Statement)커버리지이며, 실행 코드라인이 한번 이상 실행 되면 충족된다. 조건(Condition)커버리지는 각 내부 조건이 참 혹은 거짓을 가지면 충족된다. 결정(Decision) 커버리지는 각 분기의 내부 조건자체가 아닌 이러한 조건으로 인해 전체 결과가 참 혹은 거짓이면 충족된다.</summary></entry><entry><title type="html">Opensource Guide</title><link href="http://10.81.208.53:8999/oss-guide/" rel="alternate" type="text/html" title="Opensource Guide" /><published>2021-04-03T00:00:00+09:00</published><updated>2021-04-03T00:00:00+09:00</updated><id>http://10.81.208.53:8999/oss-guide</id><content type="html" xml:base="http://10.81.208.53:8999/oss-guide/">&lt;p&gt;#oss guide 시작??&lt;/p&gt;</content><author><name>Architecture Soluction Opensource</name></author><category term="Blog" /><summary type="html">#oss guide 시작??</summary></entry></feed>
+&lt;a href=&quot;https://woowacourse.github.io/javable/post/2020-10-24-code-coverage/&quot;&gt;CodeCoverage-우아한테크코스&lt;/a&gt;&lt;/p&gt;</content><author><name>Architecture Solution Opensource</name></author><category term="Blog" /><summary type="html">Code Coverage Code Coverage 는 테스트를 진행했을때 코드 자체가 얼마나 실행되었는지 측정하는 것이다. 코드는 구문(Statement), 조건(Condition), 결정(Decision) 으로 이루어진다. 이 세가지 항목을 얼마나 커버했느냐에 따라 측정값이 달라진다. 일반적으로 많이 사용되는 커버리지는 구문(Statement)커버리지이며, 실행 코드라인이 한번 이상 실행 되면 충족된다. 조건(Condition)커버리지는 각 내부 조건이 참 혹은 거짓을 가지면 충족된다. 결정(Decision) 커버리지는 각 분기의 내부 조건자체가 아닌 이러한 조건으로 인해 전체 결과가 참 혹은 거짓이면 충족된다.</summary></entry><entry><title type="html">Opensource Guide</title><link href="http://10.81.208.53:8999/oss-guide/" rel="alternate" type="text/html" title="Opensource Guide" /><published>2021-04-03T00:00:00+09:00</published><updated>2021-04-03T00:00:00+09:00</updated><id>http://10.81.208.53:8999/oss-guide</id><content type="html" xml:base="http://10.81.208.53:8999/oss-guide/">&lt;p&gt;#oss guide 시작??&lt;/p&gt;</content><author><name>Architecture Solution Opensource</name></author><category term="Blog" /><summary type="html">#oss guide 시작??</summary></entry></feed>

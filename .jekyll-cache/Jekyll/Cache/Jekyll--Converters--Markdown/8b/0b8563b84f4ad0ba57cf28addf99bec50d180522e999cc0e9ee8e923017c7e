@@ -1,0 +1,27 @@
+I"<h1 id="site---gatsby-static-site-generator">Site - Gatsby Static Site Generator</h1>
+<ul>
+  <li>Gatsby Starter Template사이트에 방문하여 원하는 Template 설치 
+https://www.gatsbyjs.com/starters/
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Insatllation with 'git clone'</span>
+git clone git@github.com:&lt;user&gt;/&lt;repository&gt; my-site
+<span class="nb">cd </span>my-site
+<span class="c"># Installation dependency</span>
+yarn insatll       
+<span class="c"># To develop</span>
+yarn develop
+<span class="c"># To build</span>
+yarn build
+<span class="c"># To start</span>
+gatsby develop
+</code></pre></div>    </div>
+  </li>
+  <li>Git Repository에 Push</li>
+  <li>Git Page 연동
+    <ul>
+      <li>해당 repository의 Settings</li>
+      <li>Pages에서 해당 branch, root 로 설정하여 저장
+<img src="https://user-images.githubusercontent.com/20086137/114368273-36c37900-9bb8-11eb-9d9b-e090513ce31c.png" alt="image" /></li>
+    </ul>
+  </li>
+</ul>
+:ET

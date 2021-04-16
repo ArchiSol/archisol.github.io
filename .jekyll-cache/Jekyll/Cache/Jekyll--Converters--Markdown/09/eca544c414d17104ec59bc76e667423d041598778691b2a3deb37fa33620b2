@@ -1,0 +1,31 @@
+I"�<h2 id="code-coverage---codecov">Code Coverage - CodeCov</h2>
+<ul>
+  <li>codecov 사이트 가입 후 repository 활성화</li>
+  <li>travis.yml script추가</li>
+</ul>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">script</span><span class="pi">:</span> <span class="s2">"</span><span class="s">mvn</span><span class="nv"> </span><span class="s">cobertura:cobertura"</span>
+<span class="na">after_success</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">bash &lt;(curl -s https://codecov.io/bash)</span>
+  <span class="pi">-</span> <span class="s">codecov</span>
+<span class="na">env</span><span class="pi">:</span>
+   <span class="pi">-</span> <span class="s">CODECOV_TOME=583d22f4-1c33-4b5f-91ad-a370a0290fab</span>
+</code></pre></div></div>
+<ul>
+  <li>pom.xml plugin 추가</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+	<span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
+	<span class="nt">&lt;artifactId&gt;</span>cobertura-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+	<span class="nt">&lt;version&gt;</span>2.7<span class="nt">&lt;/version&gt;</span>
+	<span class="nt">&lt;configuration&gt;</span>
+		<span class="nt">&lt;formats&gt;</span>
+			<span class="nt">&lt;format&gt;</span>html<span class="nt">&lt;/format&gt;</span>
+			<span class="nt">&lt;format&gt;</span>xml<span class="nt">&lt;/format&gt;</span>
+		<span class="nt">&lt;/formats&gt;</span>
+		<span class="nt">&lt;check</span> <span class="nt">/&gt;</span>
+	<span class="nt">&lt;/configuration&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
+:ET

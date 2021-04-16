@@ -1,0 +1,27 @@
+I"Y<h1 id="telegram-notify">Telegram Notify</h1>
+<p>1.Add ./github/workflow/main.xml for github action</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">telegram message</span>
+<span class="na">on</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">push</span><span class="pi">]</span>
+<span class="na">jobs</span><span class="pi">:</span>
+
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Build</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@master</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">send custom message</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">appleboy/telegram-action@master</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">to</span><span class="pi">:</span> <span class="s">$</span>
+        <span class="na">token</span><span class="pi">:</span> <span class="s">$</span>
+        <span class="na">message</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">The $ event triggered final step.</span>
+          <span class="s">echo This event is a pull request that had an assignee removed.</span>
+</code></pre></div></div>
+<p>2.Add repository secrets</p>
+<ul>
+  <li>Settings -&gt;  Secrets</li>
+  <li>TELEGRAM_TO, TELEGRAM_TOKEN 생성</li>
+  <li>guide to get TELEGRAM_TO, TELEGRAM_TOKEN (https://core.telegram.org/bots/api)</li>
+</ul>
+:ET

@@ -1,0 +1,19 @@
+I"�<h2 id="issue-생성-및-관리">Issue 생성 및 관리</h2>
+<ol>
+  <li>Issue유형
+    <ul>
+      <li>프로그램 버그</li>
+      <li>프로그램 개선사항 및 아이디어</li>
+      <li>일반 문의</li>
+    </ul>
+  </li>
+  <li>생성 및 관리
+    <ul>
+      <li>Issue를 생성하고 관리할 수 있는 Tools(Git-Issue, jira 등)를 사전에 정의하라</li>
+      <li>식별된 Issue에 대해 중복으로 등록이 되는 것을 막아라</li>
+      <li>Issue Template을 작성하여 일관성있는 Issue Format을 유지하라</li>
+      <li>Issue Label을 생성하여 Issue를 효율적으로</li>
+    </ul>
+  </li>
+</ol>
+:ET

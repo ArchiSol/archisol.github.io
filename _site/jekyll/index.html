@@ -9,19 +9,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Jekyll - Architecture Soluction Opensource</title>
+<!-- begin _includes/seo.html --><title>Jekyll - Architecture Solution Opensource</title>
 <meta name="description" content="Jekyll은 개인 프로젝트 또는 조직 사이트에 적합한 정적 사이트 생성기 입니다. Jekyll 은 콘텐츠를 가져와 Markdown 및 Liquid 템플릿을 렌더링하여 웹사이트를 생성합니다. 기본적으로 Jekyll 은 Ruby 로 만들어져 있으나, 운영하는데 Ruby 를 공부할 필요는 없습니다. 간단히 Markdown 을 생성 수정하는것 만으로 웹사이트를 운영할 수 있습니다. 또한 GitHub 와 강력히 연동되어 있습니다. GitHub 에 Markdown 파일을 push 하기만 하면 Github Page 에서 자동으로 웹페이지를 업데이트해 줍니다.">
 
 
-  <meta name="author" content="Architecture Soluction Opensource">
+  <meta name="author" content="Architecture Solution Opensource">
   
-  <meta property="article:author" content="Architecture Soluction Opensource">
+  <meta property="article:author" content="Architecture Solution Opensource">
   
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:site_name" content="Architecture Soluction Opensource">
+<meta property="og:site_name" content="Architecture Solution Opensource">
 <meta property="og:title" content="Jekyll">
 <meta property="og:url" content="http://10.81.208.53:8999/jekyll/">
 
@@ -55,7 +55,7 @@
     "@context": "https://schema.org",
     
       "@type": "Person",
-      "name": "Architecture Soluction Opensource",
+      "name": "Architecture Solution Opensource",
       "url": "http://10.81.208.53:8999/"
     
   }
@@ -70,7 +70,7 @@
 
 
 
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Architecture Soluction Opensource Feed">
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Architecture Solution Opensource Feed">
 
 
 <!-- https://t.co/dKP3o1e -->
@@ -142,9 +142,7 @@
             </li><li class="masthead__menu-item">
               <a href="/year-archive/">Blog</a>
             </li><li class="masthead__menu-item">
-              <a href="https://github.com/architecture-solution/">Events</a>
-            </li><li class="masthead__menu-item">
-              <a href="https://github.com/architecture-solution/">GitHub</a>
+              <a href="https://github.com/archisol/">GitHub</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -175,11 +173,11 @@
 
   <div class="author__content">
     
-      <h3 class="author__name" itemprop="name">Architecture Soluction Opensource</h3>
+      <h3 class="author__name" itemprop="name">Architecture Solution Opensource</h3>
     
     
       <div class="author__bio" itemprop="description">
-        <p>Architecture Soluction Opensource.</p>
+        <p>Architecture Solution Opensource.</p>
 
       </div>
     
@@ -402,7 +400,8 @@ Minimal-Mistakes 관련 상세 설정은 <a href="https://mmistakes.github.io/mi
 ">이전</a>
     
     
-      <a href="#" class="pagination--pager disabled">다음</a>
+      <a href="/code-coverage-codecov-with-travis/" class="pagination--pager" title="Codecove - Travis 연동
+">다음</a>
     
   </nav>
 
@@ -426,7 +425,7 @@ Minimal-Mistakes 관련 상세 설정은 <a href="https://mmistakes.github.io/mi
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/oss-guide/" rel="permalink">Opensource Guide
+        <a href="/travis/" rel="permalink">Travis
 </a>
       
     </h2>
@@ -451,7 +450,12 @@ Minimal-Mistakes 관련 상세 설정은 <a href="https://mmistakes.github.io/mi
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">#oss guide 시작??
+    <p class="archive__item-excerpt" itemprop="description">Travis
+
+  Travis CI, Github계정으로 회원가입
+  연동시킬 Repository 활성화
+  Project root경로에 .travis.yml 작성
+
 </p>
   </article>
 </div>
@@ -466,7 +470,7 @@ Minimal-Mistakes 관련 상세 설정은 <a href="https://mmistakes.github.io/mi
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/code-coverage/" rel="permalink">Code Coverage
+        <a href="/telegram/" rel="permalink">Github - Telegram 연동
 </a>
       
     </h2>
@@ -484,16 +488,109 @@ Minimal-Mistakes 관련 상세 설정은 <a href="https://mmistakes.github.io/mi
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 분 소요
+          최대 1 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Code Coverage
-Code Coverage 는 테스트를 진행했을때 코드 자체가 얼마나 실행되었는지 측정하는 것이다.
-코드는 구문(Statement), 조건(Condition), 결정(Decision) 으로 이루어진다. 이 세가지 항목을 얼마나 커버했느냐에 따라 측정값이 달라...</p>
+    <p class="archive__item-excerpt" itemprop="description">Telegram Notify
+1.Add ./github/workflow/main.xml for github action
+```yml
+name: telegram message
+on: [push]
+jobs:
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/sonarcloud-travis/" rel="permalink">SonarCloud - Travis 연동
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Code Quality - SonarCloud
+
+  SonarCloud와 Github연결
+  SonarCloud 회원가입(https://sonarcloud.io/)
+  Allow to access for github repository
+  get secure key
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/gatsby/" rel="permalink">Gatsby
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Site - Gatsby Static Site Generator
+
+  Gatsby Starter Template사이트에 방문하여 원하는 Template 설치 
+https://www.gatsbyjs.com/starters/
+    # Insatllation with 'git clon...</p>
   </article>
 </div>
 
@@ -541,7 +638,7 @@ Code Coverage 는 테스트를 진행했을때 코드 자체가 얼마나 실행
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2021 Architecture Soluction Opensource. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 Architecture Solution Opensource. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

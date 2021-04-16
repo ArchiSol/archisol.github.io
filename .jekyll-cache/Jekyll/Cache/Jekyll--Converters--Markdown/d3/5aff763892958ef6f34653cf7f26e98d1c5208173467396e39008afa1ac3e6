@@ -1,0 +1,30 @@
+I"�<h1 id="code-quality---sonarcloud">Code Quality - SonarCloud</h1>
+<ul>
+  <li>SonarCloud와 Github연결</li>
+  <li>SonarCloud 회원가입(https://sonarcloud.io/)</li>
+  <li>Allow to access for github repository</li>
+  <li>get secure key</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>travis
+travis login <span class="nt">--github-token</span> ghp_uS<span class="k">****************</span>wtN0iiSxg
+travis encrypt <span class="nv">SOMEVAR</span><span class="o">=</span><span class="s2">"fe7fe6**********e014803dfa8f"</span> <span class="nt">-r</span> giyeonYu/OSS
+</code></pre></div></div>
+<p>ghp_uS<strong>**</strong><strong>**</strong><strong>**wtN0iiSxg =&gt; github token
+fe7fe6</strong><strong>**</strong>**e014803dfa8f =&gt; travis token</p>
+<ul>
+  <li>edit .travis.yml</li>
+</ul>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">addons</span><span class="pi">:</span>
+  <span class="na">sonarcloud</span><span class="pi">:</span>
+    <span class="na">organization</span><span class="pi">:</span> <span class="s2">"</span><span class="s">giyeonyu"</span>
+    <span class="na">token</span><span class="pi">:</span>
+      <span class="na">secure</span><span class="pi">:</span> <span class="s2">"</span><span class="s">**************************"</span> <span class="c1"># encrypted value of your token</span>
+
+<span class="na">script</span><span class="pi">:</span>
+  <span class="c1"># the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis</span>
+  <span class="pi">-</span> <span class="s">mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.login=c1a58ac2e42e06851dd4e9c8de969a76a1d53a1f</span>
+</code></pre></div></div>
+<p>sonarcloud needs over jdk11 at least.</p>
+:ET

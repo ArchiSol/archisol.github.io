@@ -1,5 +1,5 @@
 ---
-title: "Code Coverage"
+title: "Codecov - Github Action 연동"
 classes: wide
 toc: true
 categroies:

@@ -16,12 +16,12 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "Architecture Soluction Opensource"
+title                    : "Architecture Solution Opensource"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Architecture Soluction Opensource"
-description              : "Architecture Soluction Opensource."
-url                      : "https://https://github.com/architecture-solution"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : "Architecture Solution Opensource"
+description              : "Architecture Solution Opensource."
+url                      : "https://github.com/archisol" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -94,9 +94,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Architecture Soluction Opensource"
+  name             : "Architecture Solution Opensource"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Architecture Soluction Opensource."
+  bio              : "Architecture Solution Opensource."
   location         : "Seoul"
   email            :
   links:
