@@ -47,14 +47,10 @@ codecov 설명
 Build 에 의해 생성된 jar, war, static website, 문서 등 결과물을 배포한다.
 유형에 따라 Maven, Artifactory, GitHub Page 등에 배포된다.  
 artifactory 설명  
-page 설명
 
 
 ### Feedback
 오픈소스에서 커뮤니티를 운영하는것은 가장 중요한 작업중 하나다. 커뮤니티의 활성화에 따라 사용자 / 기여자 의 참여율이 달라진다.
 여러가지 Feedback 경로를 통해 사용자들의 의견을 청취하고, 반영해야한다.  
-issue 설명  
-google groups 설명
 
-
-## 참고
+***환경 구성 관련하여 유용한 자료들은 Blog 를 통해 지속적으로 업로드할 예정임***
