@@ -20,7 +20,8 @@ Github Marketplace 를 통해 다른 사용자들이 공개한 Action 을 바로
 자세한 내용은 [Falsy Lab 의 Blog](https://falsy.me/github-actions-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-2-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%95%A1%EC%85%98-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EA%B9%83%ED%97%88%EB%B8%8C-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A0%88/) 에서 확인할 수 있다.
 
 ## Workflow 생성
-.github/workflows 디렉토리에 yml 을 작성하면 GitHub Action 에서 인식하여 Event 발생시 자동으로 해당하는 workflow 를 실행한다.
+.github/workflows 디렉토리에 yml 을 작성하면 GitHub Action 에서 인식하여 Event 발생시 자동으로 해당하는 workflow 를 실행한다.  
+Youtube 강좌 : [GitHub Actions Tutorial - Basic Concepts and CI/CD Pipeline with Docker](https://www.youtube.com/watch?v=R8_veQiYBjI&ab_channel=TechWorldwithNana)
 
 - Sample Workflow - Artifact  생성 / Upload
 
