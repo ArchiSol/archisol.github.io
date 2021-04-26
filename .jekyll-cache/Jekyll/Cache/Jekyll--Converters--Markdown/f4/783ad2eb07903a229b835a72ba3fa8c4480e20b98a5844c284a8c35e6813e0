@@ -1,7 +1,0 @@
-I"�<h2 id="travis">Travis</h2>
-<ul>
-  <li>Travis CI, Github계정으로 회원가입</li>
-  <li>연동시킬 Repository 활성화</li>
-  <li>Project root경로에 .travis.yml 작성</li>
-</ul>
-:ET

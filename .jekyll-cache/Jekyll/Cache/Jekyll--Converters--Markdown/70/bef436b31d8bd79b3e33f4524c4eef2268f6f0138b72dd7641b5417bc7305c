@@ -1,7 +1,0 @@
-I"&<p>GitHub Action 은 소프트웨어 개발 워크플로우를 자동화하는 도구이다. 
-Github 에서 Pull Reqeust, Issue 생성, Merge 등의 이벤트가 생성했을때 Action 을 통해 워크플로우를 수행할 수 있다.
-기존에는 Travis 나 Circle 과 같은 CI 도구를 많이 사용하였으나 관리를 위해 GitHub 와 다른 서비스 페이지를 이동해야 하는 불편이 있었다.
-이제는 GitHub 에서 직접 Action 서비스를 시작하면서, GitHub 안에서 CI/CD 작업이 가능해졌다.
-Github Marketplace 를 통해 다른 사용자들이 공개한 Action 을 바로 활용할 수 있다.
-대부분의 우리가 원한는 작업들이 이미 공개되어있으며, 간단히 조합만으로 새로운 워크플로우를 만들어 사용 할 수 있다.</p>
-:ET

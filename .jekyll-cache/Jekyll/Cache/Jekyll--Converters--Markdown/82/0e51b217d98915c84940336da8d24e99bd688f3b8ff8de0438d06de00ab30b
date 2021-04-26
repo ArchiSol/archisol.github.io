@@ -1,7 +1,0 @@
-I"—<h1 id="telegram-notify">Telegram Notify</h1>
-<p>1.Add ./github/workflow/main.xml for github action
-```yml
-name: telegram message
-on: [push]
-jobs:</p>
-:ET
