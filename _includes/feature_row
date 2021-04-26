@@ -16,13 +16,14 @@
             {% if f.image_caption %}
               <span class="archive__item-caption">{{ f.image_caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
             {% endif %}
+            {% if f.title %}
+              <h3 class="archive__item-title">{{ f.title }}</h3>
+            {% endif %}
           </div>
         {% endif %}
 
         <div class="archive__item-body">
-          {% if f.title %}
-            <h2 class="archive__item-title">{{ f.title }}</h2>
-          {% endif %}
+          
 
           {% if f.excerpt %}
             <div class="archive__item-excerpt">

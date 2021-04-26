@@ -12,10 +12,10 @@ excerpt: >
   Perfect for building easy and simple software architecture.<br /><br />
   
 feature_row:
-  - image_path: /assets/images/elena_logo_text.png
+  - image_path: /assets/images/elena_logo1.png
     alt: "customizable"
-    title: ""
-    excerpt: "LENA - Middleware Solution, Opensource community"
+    title: "ELENA <br /> Opensource"
+    excerpt: "LENA - Middleware Solution, Opensource community LENA - Middleware Solution, Opensource community LENA - Middleware Solution, Opensource community LENA - Middleware Solution, Opensource community LENA - Middleware Solution, Opensource community "
     url: "https://github.com/lenaosc"
     btn_class: "btn--small"
     btn_label: "GitHub"

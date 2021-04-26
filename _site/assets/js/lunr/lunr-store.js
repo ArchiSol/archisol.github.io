@@ -88,4 +88,10 @@ var store = [{
         "tags": ["Blog"],
         "url": "/travis/",
         "teaser": null
+      },{
+        "title": "Release Note 자동화 (Release Drafter)",
+        "excerpt":"Release 시점에 Release Note 를 작성하는것은 필수다. 하지만 수정사항이 많고 프로젝트 참여자가 많다면, Release Note 를 작성하고, 검토하는것은 쉽지 않은 일이다. Github 환경에서는 Release Drafter 를 통해 Release Note 작성을 자동화 할 수 있다. Release Drafter 사용방법 Action 설정 .github/workflows 디렉토리에 release-drafter.yml 생성 name: Release Drafter on: push: branches: -...","categories": [],
+        "tags": ["Blog"],
+        "url": "/release-drafter/",
+        "teaser": null
       }]

@@ -89,9 +89,12 @@
   position: relative;
   border-radius: $border-radius;
   overflow: hidden;
+  display: flex;
+  align-items: flex-end;
 
   img {
-    width: 100%;
+    width: 80px;
+    margin-right: 10px;
   }
 }
 
